@@ -32,8 +32,9 @@ function draw_T_Td(obj1, obj2) {
 
 }
 
-function draw_dp(obj, trend) {
-    var dp = 0;
+function draw_dp(obj, trend, pressureTrend) {
+    var dp = pressureTrend;
+    console.log(dp + "TREND");
     if (dp == "") {
         obj.text = "";
         trend.sourceRect = new createjs.Rectangle(0, 0, 20, 20);       
@@ -82,7 +83,11 @@ function draw_vis(obj) {
     if(visibility<10&&visibility>0){
         obj.getChildByName("vis_whole").text = parseInt(visibilityWhole);
     }
-    else{obj.getChildByName("vis_whole").text = "";}
+    else if(visibility>=10){
+        obj.getChildByName("vis_whole").text = "∞";
+    } else {
+        obj.getChildByName("vis_whole").text = "";
+    }
     
     if (visIndexReal > 0 && visIndexReal<5) {
         obj.getChildByName("vis_num").text = "1";

@@ -1,0 +1,37 @@
+[
+    {
+        "macAddress": "84:F3:EB:64:5B:59",
+        "lastData": {
+            "dateutc": 1620843420000,
+            "tempinf": 84.6,
+            "humidityin": 22,
+            "baromrelin": 30.366,
+            "baromabsin": 28.914,
+            "tempf": 57.7,
+            "humidity": 38,
+            "winddir": 0,
+            "windspeedmph": 7.8,
+            "windgustmph": 10.3,
+            "maxdailygust": 22.8,
+            "hourlyrainin": 0,
+            "eventrainin": 0,
+            "dailyrainin": 0,
+            "weeklyrainin": 0.059,
+            "monthlyrainin": 0.87,
+            "totalrainin": 35.268,
+            "solarradiation": 802.04,
+            "uv": 7,
+            "feelsLike": 57.7,
+            "dewPoint": 32.27,
+            "feelsLikein": 81.8,
+            "dewPointin": 41.5,
+            "lastRain": "2021-05-10T05:10:00.000Z",
+            "tz": "Etc/GMT",
+            "date": "2021-05-12T18:17:00.000Z"
+        },
+        "info": {
+            "name": "South Lewis Weather Station",
+            "location": "SLCSD"
+        }
+    }
+]

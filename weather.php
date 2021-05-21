@@ -1,68 +1,53 @@
 <?php
+        $databaseName = "weather";
+        $tablename = "weatherstation";
+        $servername = "127.0.0.1";
+        $username = "pma";
+        $password = "";
+        $dbname = "weather";
+        $conn = new mysqli($servername, $username, $password) or die("Error connecting ". mysqli_error($conn));
+        mysqli_select_db($conn, $dbname) or die("yeah that doesn't work");
+        $sql1 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 0,1";
+        $sql2 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 36,1";
+        $result1 = mysqli_query($conn, $sql1) or die("ERROR IN SELECTING FIRST". mysqli_error($conn));
+        $result2 = mysqli_query($conn, $sql2) or die("ERROR IN SELECTING SECOND". mysqli_error($conn));
 
-	$api_url = 'https://api.ambientweather.net/v1/devices?applicationKey=698db98a3d16443eabc27e05981707dd1816f9fdce234080b1d322c757fb3bee&apiKey=4e79425cd75740b48c9755b55d59ad830393733a125a44f2b52b85e4e1310f48';
-    $api_url2 = 'https://api.darksky.net/forecast/1ab54032d29c1e5563ca79d31c65c951/43.6361,-75.3944';
-    
-    $fileContents = file_get_contents($api_url);
-    
-    $forecast = json_decode($fileContents, true);
-    
-    $forecastA = json_decode(file_get_contents($api_url2));  
-    
-    function multiKeyExists(array $arr, $key) {
+        $weatherArray1 = array();
+        $weatherArray2 = array();
         
-        // is in base array?
-        if (array_key_exists($key, $arr)) {
-            return true;
-        }
-    
-        // check arrays contained in this array
-        foreach ($arr as $element) {
-            if (is_array($element)) {
-                if (multiKeyExists($element, $key)) {
-                    return true;
-                }
-            }  
-        }
-    
-        return false;
-    }
-
-    if(multiKeyExists($forecast,'tempf')) {
-        foreach ($forecast as $row)
+        while($row = mysqli_fetch_assoc($result1))
         {
-            $temp = round($row['lastData']['tempf'], 1, PHP_ROUND_HALF_UP);
-            $dew = round($row['lastData']['dewPoint'], 1, PHP_ROUND_HALF_UP);
-            //$windBearing = $row['lastData']['winddir'];
-            $windSpeed = $row['lastData']['windspeedmph'];
-            $press = round($row['lastData']['baromrelin'] * 33.8639, 1, PHP_ROUND_HALF_UP);
-            $hum = $row['lastData']['humidity']/100;
+            $weatherArray1[]=$row;
         }
-        $windBearing = $forecastA->currently->windBearing;
-        //$windSpeed = $forecastA->currently->windSpeed;
-        $cloudCover = $forecastA->currently->cloudCover;
-        $summary = $forecastA->currently->summary;
-        $visibility = $forecastA->currently->visibility;
-        $icon = $forecastA->currently->icon;
-        $gust = $forecastA->currently->windGust;
-        
-        $stationState = "Weather Station Online";
-    }
-    else {
-        $windSpeed = $forecastA->currently->windSpeed;
-        $windBearing = $forecastA->currently->windBearing;
-        $cloudCover = $forecastA->currently->cloudCover;
-        $summary = $forecastA->currently->summary;
-        $visibility = $forecastA->currently->visibility;
-        $icon = $forecastA->currently->icon;
-        $gust = $forecastA->currently->windGust;
-        $temp = $forecastA->currently->temperature;
-        $dew = $forecastA->currently->dewPoint;
-        $press = round($forecastA->currently->pressure, 1, PHP_ROUND_HALF_UP);
-        $hum = $forecastA->currently->humidity;
+        while($row = mysqli_fetch_assoc($result2))
+        {
+            $weatherArray2[]=$row;
+        }
 
-        $stationState = "South Lewis Weather Station Offline - Using Darksky API Interpolated Data";
-    }
+        $pressure1 = $weatherArray1[0]['baromrelin'];
+        $pressure2 = $weatherArray2[0]['baromrelin'];
+        if($pressure1<40){$pressure1 = $pressure1 * 33.8639; }
+        if($pressure2<40){$pressure2 = $pressure2 * 33.8639; }
+        $pressureChange = round($pressure1 - $pressure2, 2, PHP_ROUND_HALF_UP);
+
+        $timeInterval = $weatherArray1[0]['dateutc']-$weatherArray2[0]['dateutc'];
+
+        $windSpeed = $weatherArray1[0]['windspeedmph'];
+        $windBearing = $weatherArray1[0]['winddir'];
+        $cloudCover = $weatherArray1[0]['cloudcover'];
+        $summary = $weatherArray1[0]['summary'];
+        $visibility = $weatherArray1[0]['visibility'];
+        $icon = $weatherArray1[0]['icon'];
+        $gust = $weatherArray1[0]['gust'];
+        $temp = $weatherArray1[0]['tempf'];
+        $dew = $weatherArray1[0]['dewPoint'];
+        $press = $pressure1;
+        $hum = $weatherArray1[0]['humidity'];
+
+        $stationState = $weatherArray1[0]['stationState'];
+    
+   
+
    
 ?>
 
@@ -72,186 +57,17 @@
 <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
 <title>South Lewis Weather</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="weather.css">
 <script type="text/javascript" src="createjs.min.js"></script>
 <script type="text/javascript" src="stationmodel_draw_fcns.js"></script>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 
-<style>
-    * {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-    }
-
-    a:link {
-        color: red;
-    }
-
-    /* visited link */
-    a:visited {
-        color: green;
-    }
-
-    /* mouse over link */
-    a:hover {
-        color: hotpink;
-    }
-
-    /* selected link */
-    a:active {
-        color: blue;
-    }
-    
-    ::selection {
-        background: none;
-    }
-
-    .button-panel {
-        height: 270px;
-        width: 200px;
-        position: absolute;
-        top: 0%;
-        right: 20px;
-        background: rgba(0,0,0,0.1);
-        z-index: 9;
-    }
-
-    .button-panel-header {
-        text-align: center; 
-        cursor: move;
-        z-index: 10;
-    }
-
-    button {
-        border: none;
-        background: rgba(0,0,0,1);
-        color: #ffffff !important;
-        position: relative;
-        text-align: center;
-        left: 20px;
-        width: 150px;
-        font-size: 12px;
-        font-weight: 100;
-        padding: 10px 20px;
-        margin: 5px;
-        text-transform: uppercase;
-        border-radius: 6px;
-        box-shadow: inset 0 0 7px white;
-        display: inline-block;
-        transition: all 0.3s ease-in 0.1s;
-    }
-
-    button:hover{
-        color: #404040 !important;
-        font-weight: 700 !important;
-        left: -5px;
-        width: 200px;
-        letter-spacing: 3px;
-        background: white;
-        -webkit-box-shadow: 0px 5px 40px -10px rgba(255,255,255,0.7);
-        -moz-box-shadow: 0px 5px 40px -10px rgba(255,255,255,0.7);
-        transition: all 0.3s ease 0s;
-    }
-
-    button:focus{
-        outline: none;
-        box-shadow: inset 0 0px 5px 0 rgba(255, 255, 255, 0.7);
-    }
-
-    canvas {
-        padding-left: 0;
-        padding-right: 0;
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;   
-    }
-
-    .horizontal {
-        background-color: transparent;
-        border: none;
-        color: red;
-        padding: 5px 5px;
-        text-align: center;
-        font-size: 16px;
-        margin: 2px 2px;
-        opacity: 1;
-        transition: 0.3s;
-        -webkit-text-stroke: 1px black;
-        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
-    }
-
-    .horizontal:hover {
-        color: white; 
-        background-color: #ff5555;
-    }
-
-    .dataField {
-        -webkit-transition: color 0.5s, font-size 0.5s;
-        transition: color 0.5s, font-size 0.3s;
-        font-size: 16px;
-        color: #FFFFFF;
-    }
-
-    .dataField:hover {
-        font-size: 30px;
-        color: #FFFFFF;
-    }
-    
-    .grad{
-        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
-    }
-
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 11; /* Sit on top */
-        padding-top: 50px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgba(0,0,0,0.4); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        outline: none;
-        border: none;
-    }
-
-    /* Modal Content */
-    .modal-content {
-        background-color: rgba(255,255,255,0.4);
-        margin: auto;
-        padding: 5px;
-        outline: none;
-        border: none;
-        width: 200px;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .dataField.changed {
-        color: aqua;
-    }
-    
-</style>
-
 <script>
     var tempF = <?php echo $temp ?>;
-    var rh = 100 * <?php echo $hum ?>;
+    var rh = <?php echo $hum ?>;
     var MBpressure = <?php echo $press ?>;
     var dewPOYNT = <?php echo $dew ?>;
+    var timeInterval = <?php echo $timeInterval ?>;
     var wetbulb;
     var Ctemp = (tempF - 32) * 5 / 9;
     var Cdew = (dewPOYNT - 32) * 5 / 9;
@@ -281,8 +97,8 @@
     var visibilityRemainder = visibility - visibilityWhole;
     var visIndexReal = Math.round(Math.log(visibilityRemainder)/Math.log(2)*(-1));
     var whatWeather = "<?php echo $summary?>";
-    var clickState = true;
-
+    var clickState = false;
+    var pressureChange = <?php echo $pressureChange ?>;
 
     function convertWet(){			
         Es = parseFloat(esubs(Ctemp));		     
@@ -456,12 +272,13 @@
         pres.y = station.y - 50;
         pres_box.graphics.f("rgba(255,255,255,0.2)").dr(pres.x, pres.y, 40, 22);
 
-        draw_dp(dpres, p_trend)
+        draw_dp(dpres, p_trend, pressureChange);
         dpres.x = station.x + 38;
         dpres.y = station.y - 10;
         dpres_box.graphics.f("rgba(255,255,255,0.2)").dr(dpres.x - 2, dpres.y, 40, 22);
         p_trend.x = station.x + 75;
         p_trend.y = station.y - 10;
+        document.getElementById("timeInterval").innerHTML = "Pressure Trend over "+ (timeInterval * 2.77778e-7).toFixed(2) + " hours";
 
         draw_T_Td(temp, dewpt);
         temp.x = station.x - 65;
@@ -719,7 +536,7 @@
                 </div>
                 <div class="row pt-2">
                     <div class="col dataField" id="dpt">Dewpoint&nbsp;<?php echo $dew; ?>&degF</div>
-                    <div class="col dataField" id="rh">Humidity&nbsp;<?php echo 100 * $hum; ?>%</div>
+                    <div class="col dataField" id="rh">Humidity&nbsp;<?php echo $hum; ?>%</div>
                 </div>
                 <div class="row pt-2">
                     <div class="col dataField" id="windData"><script>document.getElementById("windData").innerHTML = "Wind Speed&nbsp;"+windSpeed.toFixed(1)+" kts from "+windDir+"&deg;";</script></div>
@@ -773,9 +590,9 @@
         <img id="cloudBaseIMG" src="Sky.png" style="display:none;"/>
     </div>
     <div class="container-fluid" style="position: relative;">
-        <div class="button-panel" id="button-panel" style="position: absolute; top: 0%; right:0%;">
-            <div class="button-panel-header" id="button-panelheader" onclick="toggleGuts('#button-panelGuts',this)">Reference Table Pages</div>
-            <div class="button-panel-guts" id="button-panelGuts">
+        <div class="button-panel" id="button-panel">
+            <div class="button-panel-header" id="button-panelheader" onclick="toggleGuts('#button-panelGuts','button-panelGuts')">Reference Table Pages</div>
+            <div class="button-panel guts" id="button-panelGuts">
                 <div><button id="pressureBtn">Pressure</button></div>
                 <div><button id="tempBtn">Temperature</button></div>
                 <div><button id="humidityBtn">Humidity Calc</button></div>
@@ -797,6 +614,7 @@
                 }
 
                 function toggleGuts(className, obj){
+                   
                     if (!clickState){
                         $(className).slideDown();
                         clickState = true;
@@ -805,6 +623,7 @@
                         $(className).slideUp();
                         clickState = false;
                     }
+                    $(className).toggleClass("open");
                 }
 
                 var windUnit = "kts";
@@ -955,6 +774,10 @@
         <div class="col-sm-8">
             <a href="http://www.nysmesonet.org/weather/meteogram#network=nysm&stid=gfld">Glenfield Meteogram</a>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8" id="timeInterval"></div>
     </div>
     <script>drawStationModel();</script>
 </html>
