@@ -9,11 +9,15 @@
         mysqli_select_db($conn, $dbname) or die("yeah that doesn't work");
         $sql1 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 0,1";
         $sql2 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 36,1";
+        $sql3 = "SELECT dateutc, baromrelin, tempf, dewPoint FROM weatherstation ORDER BY dateutc DESC LIMIT 0,864";
+
         $result1 = mysqli_query($conn, $sql1) or die("ERROR IN SELECTING FIRST". mysqli_error($conn));
         $result2 = mysqli_query($conn, $sql2) or die("ERROR IN SELECTING SECOND". mysqli_error($conn));
+        $result3 = mysqli_query($conn, $sql3) or die("ERROR IN SELECTING THIRD". mysqli_error($conn));
 
         $weatherArray1 = array();
         $weatherArray2 = array();
+        $weatherArray3 = array();
         
         while($row = mysqli_fetch_assoc($result1))
         {
@@ -22,6 +26,10 @@
         while($row = mysqli_fetch_assoc($result2))
         {
             $weatherArray2[]=$row;
+        }
+        while($row = mysqli_fetch_assoc($result3))
+        {
+            $weatherArray3[]=$row;
         }
 
         $pressure1 = $weatherArray1[0]['baromrelin'];
@@ -45,10 +53,6 @@
         $hum = $weatherArray1[0]['humidity'];
 
         $stationState = $weatherArray1[0]['stationState'];
-    
-   
-
-   
 ?>
 
 <html>
@@ -59,8 +63,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="weather.css">
 <script type="text/javascript" src="createjs.min.js"></script>
+<script type="text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
 <script type="text/javascript" src="stationmodel_draw_fcns.js"></script>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../node_modules/dayjs/dayjs.min.js"></script>
 
 <script>
     var tempF = <?php echo $temp ?>;
@@ -81,6 +87,7 @@
     var PWS;
     var presentWeather = ["Light Rain","Moderate Rain","Heavy Rain","Rain Showers","Thunderstorm","Thunderstorm with Hail","Light Drizzle","Moderate Drizzle","Heavy Drizzle","Light Snow","Moderate Snow","Heavy Snow","Snow Showers","Sleet","Freezing Rain","Freezing Drizzle","Blowing Snow","Blowing Dust","Smoke","Haze","Fog"];
     var selectedWeather = 0;
+    var cloudCover = <?php echo $cloudCover ?>;
 
     var canvas, stage;
     var station, wind_barb, sky, temp, dewpt, pres, pres_box, background;
@@ -89,8 +96,7 @@
     var weather_image = new Image();
     var windSpeed = <?php echo $windSpeed ?>*0.868976;
     var windDir = <?php echo $windBearing ?>;
-    var cloudCoverage = <?php echo $cloudCover ?>;
-    cloudCoverage = Math.round(cloudCoverage*8);
+    var cloudCoverage = Math.round(cloudCover*8);
     
     var visibility = <?php echo $visibility ?>;
     var visibilityWhole = Math.trunc(visibility);
@@ -99,6 +105,18 @@
     var whatWeather = "<?php echo $summary?>";
     var clickState = false;
     var pressureChange = <?php echo $pressureChange ?>;
+
+    function loadVariables(){
+        document.getElementById("temp").innerHTML = "Temperature " + tempF + "&degF";
+        document.getElementById("press").innerHTML = "Pressure " + MBpressure + " mb";
+        document.getElementById("wetBulb").innerHTML = "Wetbulb " + convertWet() + "&degF";
+        document.getElementById("cloud").innerHTML = "Cloud Cover " + cloudCover*100 +"%";
+        document.getElementById("dpt").innerHTML = "Dewpoint " +dewPOYNT+ "&degF";
+        document.getElementById("rh").innerHTML = "Humidity " + rh + "%";
+        document.getElementById("windData").innerHTML = "Wind Speed "+windSpeed.toFixed(1)+" kts from " +windDir+"&deg;";
+        document.getElementById("summary").innerHTML = whatWeather;
+        document.getElementById("vis").innerHTML = "Visibility " +visibility+" miles";
+    }
 
     function convertWet(){			
         Es = parseFloat(esubs(Ctemp));		     
@@ -155,7 +173,6 @@
 
     function calcwetbulb(Edifference,Twguess,Ctemp,MBpressure,E2,previoussign,incr){
         var cursign, previoussign, incr;
-        console.log(Ctemp + "cTemp " + MBpressure + " mBpressure");
         outerloop:
         while (Math.abs(Edifference) > 0.005) 
         {
@@ -191,7 +208,6 @@
             Twguess = Twguess + incr * previoussign;
         }
         wetbulb = Twguess;
-        console.log(wetbulb + " wetbulb");
         return wetbulb;
     }			
 
@@ -302,8 +318,6 @@
         vis_line.graphics.ss(2).s("#000").mt(5, 9).lt(25, 9);
         vis.x = station.x - 95;
         vis.y = station.y - 11;
-    
-        //draw_vis(vis, visIndexReal);
        
         draw_vis(vis);    
        
@@ -334,6 +348,7 @@
         drawHumidityModal();
         drawDewModal();
         drawCloudModal();
+        loadVariables();
     }
 
     function checkInput(obj, what_chars) {
@@ -434,13 +449,12 @@
         var drybulb = (496/50)*(flooredCtemp-30+(30200/496));
         var actualDrybulb = (496/50)*(Ctemp-30+(30200/496))+rectHeight/2;
        
-        console.log(wetbulb);
         var difference = Ctemp - convertFtoC(wetbulb);
         var roundedDifference = Math.round(difference);
-        //console.log(difference);
+
         roundedDifference = (648/15)*(roundedDifference+(1560/648));
         difference = (648/15)*(difference+(1560/648))+rectWidth/2;
-        //console.log(difference);
+
         modalCtx.drawImage(img, 10, 10);
         modalCtx.lineWidth = 2;
         modalCtx.strokeStyle = "red";                                             //draw the line.
@@ -476,13 +490,13 @@
         var flooredCtemp = Math.round(Ctemp/2)*2;
         var drybulb = (496/50)*(flooredCtemp-30+(30200/496));
         var actualDrybulb = (496/50)*(Ctemp-30+(30200/496))+rectHeight/2;
-        //console.log(wetbulb);
+
         var difference = Ctemp - convertFtoC(wetbulb);
         var roundedDifference = Math.round(difference);
-        //console.log(difference);
+
         roundedDifference = (648/15)*(roundedDifference+(1560/648));
         difference = (648/15)*(difference+(1560/648))+rectWidth/2;
-        //console.log(difference);
+
         modalCtx.drawImage(img, 10, 10);
         modalCtx.scale(1.13636363636,1.13636363636);
         modalCtx.lineWidth = 2;
@@ -515,7 +529,269 @@
         modalCtx.drawImage(img,10,10);
         modalCtx.scale(1,1);
     }
-            
+
+    function drawCharts(){
+        var pressureCtx = document.getElementById('pressureChart').getContext('2d');
+        var tempsCtx = document.getElementById('tempsChart').getContext('2d');
+        var dataArray = <?php echo json_encode($weatherArray3) ?>;
+        var pressureArray = [];
+        var tempArray = [];
+        var dewArray = [];
+        var dataLabels = [];
+        var dateIndex;
+        for(var x = dataArray.length-1, y = 0; x>0; x--, y++){
+            pressureArray[y] = Number(parseFloat(dataArray[x]['baromrelin']));
+            tempArray[y] = Number(parseFloat(dataArray[x]['tempf']));
+            dewArray[y] = Number(parseFloat(dataArray[x]['dewPoint']));
+            dateIndex = dataArray[x]['dateutc'];
+            dateIndex = Number(dateIndex);
+            dataLabels[y] = dayjs(dateIndex).format('dd hh:mm a');
+        }
+        var pressureMin = Math.min.apply(null, pressureArray),
+            pressureMax = Math.max.apply(null, pressureArray);
+        var tempMin = Math.min.apply(null, dewArray),
+            tempMax = Math.max.apply(null, tempArray);
+        var pressureChart = new Chart(pressureCtx, {
+            type: 'line',
+            data: {
+                labels: dataLabels,
+                datasets: [{
+                    label: 'Relative Barometric Pressure (mb)',
+                    data: pressureArray,
+                    backgroundColor: [
+                        'rgba(255, 255, 200, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 255, 200, 1)',
+                    ],
+                    borderWidth: 1,
+                    fontColor: 'white',
+                    color: 'white'
+                }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: pressureMin,
+                        max: pressureMax,
+                        beginAtZero: false,
+                        ticks:{
+                            fontColor: 'white',
+                            color: 'white'
+                        }
+                    },
+                    x: {
+                        ticks:{
+                            fontColor: 'white',
+                            color: 'white'
+                        }
+                    }
+                },
+                elements: {
+                    point:{
+                        radius: 0.5
+                    }
+                },
+                plugins:{
+                    legend:{
+                            labels:{
+                                font:{
+                                    size:24,
+                                },
+                                color: 'white'
+                            }
+                    }
+                }
+            }
+        });
+        var tempsChart = new Chart(tempsCtx, {
+            type: 'line',
+            data: {
+                labels: dataLabels,
+                datasets: [{
+                    label: 'Temperature (°F)',
+                    data: tempArray,
+                    backgroundColor: [
+                        'rgba(255, 100, 100, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 100, 100, 1)',
+                    ],
+                    borderWidth: 1,
+                    fontColor: 'white',
+                    color: 'white'
+                },
+                {
+                    label: 'Dewpoint (°F)',
+                    data: dewArray,
+                    backgroundColor: [
+                        'rgba(100, 255, 100, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(100, 255, 100, 1)',
+                    ],
+                    borderWidth: 1,
+                    fontColor: 'white',
+                    color: 'white'
+                }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: tempMin,
+                        max: tempMax,
+                        beginAtZero: false,
+                        ticks:{
+                            fontColor: 'white',
+                            color: 'white'
+                        }
+                    },
+                    x: {
+                        ticks:{
+                            fontColor: 'white',
+                            color: 'white'
+                        }
+                    }
+                },
+                elements: {
+                    point:{
+                        radius: 0.5
+                    }
+                },
+                plugins:{
+                    legend:{
+                            labels:{
+                                font:{
+                                    size:24,
+                                },
+                                color: 'white'
+                            }
+                    }
+                }
+            }
+        });
+    }
+
+
+    function toggle(className, obj){
+        var $input = $(obj);
+        if ($input.prop('checked')) $(className).slideDown();
+        else $(className).slideUp();
+    }
+
+    function toggleGuts(className, obj){
+        
+        if (!clickState){
+            $(className).slideDown();
+            clickState = true;
+        }
+        else{
+            $(className).slideUp();
+            clickState = false;
+        }
+        $(className).toggleClass("open");
+    }
+
+    var windUnit = "kts";
+    var tempUnit = "fahr";
+    var dewUnit = "fahr";
+    var wetUnit = "fahr";
+    var pressUnit = "mb";
+
+    $(document).ready(function(){
+        $("#windData").click(function(){
+            if (windUnit == "kts"){
+                $("#windData").html("Wind Speed "+(windSpeed/0.868976).toFixed(1)+" mph from "+windDir+"&#176;");
+                $(this).toggleClass("changed");
+                windUnit = "mph";}
+            else{
+                $("#windData").html("Wind Speed "+windSpeed.toFixed(1)+" kts from "+windDir+"&#176;");
+                $(this).toggleClass("changed");
+                windUnit = "kts";}
+        });
+
+        $("#temp").click(function(){
+            if (tempUnit == "fahr"){
+                $("#temp").html("Temperature&nbsp;"+Ctemp.toFixed(1)+"&#176;C");
+                $(this).toggleClass("changed");
+                tempUnit = "cels";}
+            else{
+                $("#temp").html("Temperature&nbsp;"+tempF.toFixed(1)+"&#176;F");
+                $(this).toggleClass("changed");
+                tempUnit = "fahr";}
+        });
+        
+        $("#dpt").click(function(){
+            if (dewUnit == "fahr"){
+                $("#dpt").html("Dewpoint&nbsp;"+Cdew.toFixed(1)+"&#176;C");
+                $(this).toggleClass("changed");
+                dewUnit = "cels";}
+            else{
+                $("#dpt").html("Dewpoint&nbsp;"+dewPOYNT.toFixed(1)+"&#176;F");
+                $(this).toggleClass("changed");
+                dewUnit = "fahr";}
+        });
+
+        $("#wetBulb").click(function(){
+            if (wetUnit == "fahr"){
+                $("#wetBulb").html("Wetbulb&nbsp;"+Cwet+"&#176;C");
+                $(this).toggleClass("changed");
+                wetUnit = "cels";}
+            else{
+                $("#wetBulb").html("Wetbulb&nbsp;"+wetbulb+"&#176;F");
+                $(this).toggleClass("changed");
+                wetUnit = "fahr";}
+        });
+
+        $("#press").click(function(){
+            if (pressUnit == "mb"){
+                $("#press").html("Pressure&nbsp;"+(MBpressure*0.02953).toFixed(2)+"in Hg");
+                $(this).toggleClass("changed");
+                pressUnit = "hg";}
+            else{
+                $("#press").html("Pressure&nbsp;"+MBpressure.toFixed(1)+"mb");
+                $(this).toggleClass("changed");
+                pressUnit = "mb";}
+        });
+
+        $("#pressureBtn").click(function(){
+            $("#pressureModal").toggle();        
+        });
+        $(".closePressure").click(function(){
+            $("#pressureModal").toggle();
+        });
+
+        $("#tempBtn").click(function(){
+            $("#tempModal").toggle();        
+        });
+        $(".closeTemp").click(function(){
+            $("#tempModal").toggle();
+        });
+
+        $("#humidityBtn").click(function(){
+            $("#humidityModal").toggle();        
+        });
+        $(".closeHumidity").click(function(){
+            $("#humidityModal").toggle();
+        });
+
+        $("#dewBtn").click(function(){
+            $("#dewModal").toggle();        
+        });
+        $(".closeDew").click(function(){
+            $("#dewModal").toggle();
+        });
+
+        $("#cloudBtn").click(function(){
+            $("#cloudModal").toggle();        
+        });
+        $(".closeCloud").click(function(){
+            $("#cloudModal").toggle();
+        });
+    });
+
 </script>
 
 <body class="container bg-dark text-white">
@@ -527,23 +803,23 @@
         <input type="checkbox" id="showHideData" name="showHide" value="show" onclick="toggle('#dataSpot', this)"> Show Data   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <div id="dataSpot" style="display: none; background-color: #444444;">
                 <div class="row pt-2">
-                    <div class="col dataField" id="temp">Temperature&nbsp;<?php echo $temp; ?>&degF</div>
-                    <div class="col dataField" id="press">Pressure&nbsp;<?php echo $press; ?>&nbsp;mb</div>
+                    <div class="col dataField" id="temp"></div>
+                    <div class="col dataField" id="press"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="wetBulb"><script>document.getElementById("wetBulb").innerHTML = "Wetbulb&nbsp;"+convertWet()+"˚F";</script></div>
-                    <div class="col dataField" id="cloud">Cloud Cover&nbsp;<?php echo 100 * $cloudCover; ?>%</div>
+                    <div class="col dataField" id="wetBulb"></div>
+                    <div class="col dataField" id="cloud"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="dpt">Dewpoint&nbsp;<?php echo $dew; ?>&degF</div>
-                    <div class="col dataField" id="rh">Humidity&nbsp;<?php echo $hum; ?>%</div>
+                    <div class="col dataField" id="dpt"></div>
+                    <div class="col dataField" id="rh"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="windData"><script>document.getElementById("windData").innerHTML = "Wind Speed&nbsp;"+windSpeed.toFixed(1)+" kts from "+windDir+"&deg;";</script></div>
-                    <div class="col dataField"><?php echo $summary ?></div>
+                    <div class="col dataField" id="windData"></div>
+                    <div class="col dataField" id="summary"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="vis">Visibility&nbsp;<?php echo $visibility; ?> miles</div>
+                    <div class="col dataField" id="vis"></div>
                     <div class="col dataField" id="AbsHum"></div>
                 </div>
                 <div class="row py-2">
@@ -607,166 +883,7 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-8" id="status"><?php echo $stationState ?></div>
             <script>
-                function toggle(className, obj){
-                    var $input = $(obj);
-                    if ($input.prop('checked')) $(className).slideDown();
-                    else $(className).slideUp();
-                }
-
-                function toggleGuts(className, obj){
-                   
-                    if (!clickState){
-                        $(className).slideDown();
-                        clickState = true;
-                    }
-                    else{
-                        $(className).slideUp();
-                        clickState = false;
-                    }
-                    $(className).toggleClass("open");
-                }
-
-                var windUnit = "kts";
-                var tempUnit = "fahr";
-                var dewUnit = "fahr";
-                var wetUnit = "fahr";
-                var pressUnit = "mb";
-
-                $(document).ready(function(){
-                    $("#windData").click(function(){
-                        if (windUnit == "kts"){
-                            $("#windData").html("Wind Speed "+(windSpeed/0.868976).toFixed(1)+" mph from "+windDir+"&#176;");
-                            $(this).toggleClass("changed");
-                            windUnit = "mph";}
-                        else{
-                            $("#windData").html("Wind Speed "+windSpeed.toFixed(1)+" kts from "+windDir+"&#176;");
-                            $(this).toggleClass("changed");
-                            windUnit = "kts";}
-                    });
-
-                    $("#temp").click(function(){
-                        if (tempUnit == "fahr"){
-                            $("#temp").html("Temperature&nbsp;"+Ctemp.toFixed(1)+"&#176;C");
-                            $(this).toggleClass("changed");
-                            tempUnit = "cels";}
-                        else{
-                            $("#temp").html("Temperature&nbsp;"+tempF.toFixed(1)+"&#176;F");
-                            $(this).toggleClass("changed");
-                            tempUnit = "fahr";}
-                    });
-                   
-                    $("#dpt").click(function(){
-                        if (dewUnit == "fahr"){
-                            $("#dpt").html("Dewpoint&nbsp;"+Cdew.toFixed(1)+"&#176;C");
-                            $(this).toggleClass("changed");
-                            dewUnit = "cels";}
-                        else{
-                            $("#dpt").html("Dewpoint&nbsp;"+dewPOYNT.toFixed(1)+"&#176;F");
-                            $(this).toggleClass("changed");
-                            dewUnit = "fahr";}
-                    });
-
-                    $("#wetBulb").click(function(){
-                        if (wetUnit == "fahr"){
-                            $("#wetBulb").html("Wetbulb&nbsp;"+Cwet+"&#176;C");
-                            $(this).toggleClass("changed");
-                            wetUnit = "cels";}
-                        else{
-                            $("#wetBulb").html("Wetbulb&nbsp;"+wetbulb+"&#176;F");
-                            $(this).toggleClass("changed");
-                            wetUnit = "fahr";}
-                    });
-
-                    $("#press").click(function(){
-                        if (pressUnit == "mb"){
-                            $("#press").html("Pressure&nbsp;"+(MBpressure*0.02953).toFixed(2)+"in Hg");
-                            $(this).toggleClass("changed");
-                            pressUnit = "hg";}
-                        else{
-                            $("#press").html("Pressure&nbsp;"+MBpressure.toFixed(1)+"mb");
-                            $(this).toggleClass("changed");
-                            pressUnit = "mb";}
-                    });
-
-                    $("#pressureBtn").click(function(){
-                        $("#pressureModal").toggle();        
-                    });
-                    $(".closePressure").click(function(){
-                        $("#pressureModal").toggle();
-                    });
-
-                    $("#tempBtn").click(function(){
-                        $("#tempModal").toggle();        
-                    });
-                    $(".closeTemp").click(function(){
-                        $("#tempModal").toggle();
-                    });
-
-                    $("#humidityBtn").click(function(){
-                        $("#humidityModal").toggle();        
-                    });
-                    $(".closeHumidity").click(function(){
-                        $("#humidityModal").toggle();
-                    });
-
-                    $("#dewBtn").click(function(){
-                        $("#dewModal").toggle();        
-                    });
-                    $(".closeDew").click(function(){
-                        $("#dewModal").toggle();
-                    });
-
-                    $("#cloudBtn").click(function(){
-                        $("#cloudModal").toggle();        
-                    });
-                    $(".closeCloud").click(function(){
-                        $("#cloudModal").toggle();
-                    });
-                });
-
-
-                dragElement(document.getElementById("button-panel"));
-
-                function dragElement(elmnt) {
-                    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-                    if (document.getElementById(elmnt.id + "header")) {
-                        /* if present, the header is where you move the DIV from:*/
-                        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-                    } else {
-                        /* otherwise, move the DIV from anywhere inside the DIV:*/
-                        elmnt.onmousedown = dragMouseDown;
-                    }
-
-                    function dragMouseDown(e) {
-                        e = e || window.event;
-                        e.preventDefault();
-                        // get the mouse cursor position at startup:
-                        pos3 = e.clientX;
-                        pos4 = e.clientY;
-                        document.onmouseup = closeDragElement;
-                        // call a function whenever the cursor moves:
-                        document.onmousemove = elementDrag;
-                    }
-
-                    function elementDrag(e) {
-                        e = e || window.event;
-                        e.preventDefault();
-                        // calculate the new cursor position:
-                        pos1 = pos3 - e.clientX;
-                        pos2 = pos4 - e.clientY;
-                        pos3 = e.clientX;
-                        pos4 = e.clientY;
-                        // set the element's new position:
-                        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-                        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-                    }
-
-                    function closeDragElement() {
-                        /* stop moving when mouse button is released:*/
-                        document.onmouseup = null;
-                        document.onmousemove = null;
-                    }
-                }
+                
             </script>
     </div>
     <div class="row">
@@ -779,5 +896,11 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-8" id="timeInterval"></div>
     </div>
-    <script>drawStationModel();</script>
+    <script>
+        drawStationModel();
+       
+    </script>
+    <canvas class="graph" id="pressureChart" width="1600px" height="600px"></canvas>
+    <canvas class="graph" id="tempsChart" width="1600px" height="600px"></canvas>
+    <script>drawCharts();</script>
 </html>

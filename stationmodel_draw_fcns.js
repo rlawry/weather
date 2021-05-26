@@ -51,7 +51,7 @@ function draw_dp(obj, trend, pressureTrend) {
             trend.sourceRect = new createjs.Rectangle(100, 0, 20, 20);
         } else {
             obj.text = "0";       
-            trend.sourceRect = new createjs.Rectangle(20, 0, 20, 20);
+            trend.sourceRect = new createjs.Rectangle(40, 0, 20, 20);
         }
 
     }
