@@ -202,3 +202,26 @@ canvas {
 .dataField.changed {
     color: aqua;
 }
+
+.title {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+
+  }
+
+  .title .words {
+    float: left;
+    font-size: 24px;
+  }
+
+  .title .date {
+    float: right;
+  }
+
+  #showHideData{
+      margin-top: 5px;
+  }

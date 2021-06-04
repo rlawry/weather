@@ -1,0 +1,6050 @@
+data = [
+    {
+        "dateutc": "1622560200000",
+        "baromrelin": "1022.9",
+        "tempf": "64",
+        "dewPoint": "47.98",
+        "windspeedmph": "1.6"
+    },
+    {
+        "dateutc": "1622559900000",
+        "baromrelin": "1022.8",
+        "tempf": "63.5",
+        "dewPoint": "47.99",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622559600000",
+        "baromrelin": "1022.8",
+        "tempf": "64",
+        "dewPoint": "48.46",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622559300000",
+        "baromrelin": "1022.8",
+        "tempf": "63.1",
+        "dewPoint": "48.54",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622559000000",
+        "baromrelin": "1022.7",
+        "tempf": "63.5",
+        "dewPoint": "49.81",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622558700000",
+        "baromrelin": "1022.8",
+        "tempf": "62.6",
+        "dewPoint": "48.96",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622558400000",
+        "baromrelin": "1022.8",
+        "tempf": "62.6",
+        "dewPoint": "48.07",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622558100000",
+        "baromrelin": "1022.6",
+        "tempf": "63",
+        "dewPoint": "48.44",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622557800000",
+        "baromrelin": "1022.6",
+        "tempf": "62.8",
+        "dewPoint": "49.58",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622557500000",
+        "baromrelin": "1022.9",
+        "tempf": "62.6",
+        "dewPoint": "48.52",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622557200000",
+        "baromrelin": "1022.6",
+        "tempf": "62.2",
+        "dewPoint": "49.02",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622556900000",
+        "baromrelin": "1022.9",
+        "tempf": "62.6",
+        "dewPoint": "49.39",
+        "windspeedmph": "2.7"
+    },
+    {
+        "dateutc": "1622556600000",
+        "baromrelin": "1022.7",
+        "tempf": "62.2",
+        "dewPoint": "48.58",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622556300000",
+        "baromrelin": "1022.8",
+        "tempf": "62.4",
+        "dewPoint": "48.77",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622556000000",
+        "baromrelin": "1022.9",
+        "tempf": "62.2",
+        "dewPoint": "48.58",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622555700000",
+        "baromrelin": "1022.8",
+        "tempf": "62.4",
+        "dewPoint": "50.06",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622555400000",
+        "baromrelin": "1023.2",
+        "tempf": "62.1",
+        "dewPoint": "50.19",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622555100000",
+        "baromrelin": "1023.2",
+        "tempf": "61.7",
+        "dewPoint": "50.63",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622554800000",
+        "baromrelin": "1023.3",
+        "tempf": "59.9",
+        "dewPoint": "48.91",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622554500000",
+        "baromrelin": "1023.4",
+        "tempf": "58.8",
+        "dewPoint": "49.04",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622554200000",
+        "baromrelin": "1023.5",
+        "tempf": "58.8",
+        "dewPoint": "49.42",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622553900000",
+        "baromrelin": "1023.7",
+        "tempf": "58.6",
+        "dewPoint": "49.22",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622553600000",
+        "baromrelin": "1023.6",
+        "tempf": "58.5",
+        "dewPoint": "49.13",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622553300000",
+        "baromrelin": "1023.5",
+        "tempf": "58.1",
+        "dewPoint": "49.12",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622553000000",
+        "baromrelin": "1023.5",
+        "tempf": "58.5",
+        "dewPoint": "49.13",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622552700000",
+        "baromrelin": "1023.4",
+        "tempf": "58.6",
+        "dewPoint": "48.84",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622552400000",
+        "baromrelin": "1023.5",
+        "tempf": "58.8",
+        "dewPoint": "48.65",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622552100000",
+        "baromrelin": "1023.5",
+        "tempf": "58.8",
+        "dewPoint": "48.26",
+        "windspeedmph": "2.7"
+    },
+    {
+        "dateutc": "1622551800000",
+        "baromrelin": "1023.4",
+        "tempf": "59",
+        "dewPoint": "48.84",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622551500000",
+        "baromrelin": "1023.4",
+        "tempf": "57.9",
+        "dewPoint": "46.61",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622551200000",
+        "baromrelin": "1023.5",
+        "tempf": "56.8",
+        "dewPoint": "48.24",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622550900000",
+        "baromrelin": "1023.6",
+        "tempf": "56.7",
+        "dewPoint": "48.14",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622550600000",
+        "baromrelin": "1023.6",
+        "tempf": "55.9",
+        "dewPoint": "46.63",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622550300000",
+        "baromrelin": "1023.5",
+        "tempf": "55.9",
+        "dewPoint": "46.26",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622550000000",
+        "baromrelin": "1023.5",
+        "tempf": "55.4",
+        "dewPoint": "44.63",
+        "windspeedmph": "1.3"
+    },
+    {
+        "dateutc": "1622549700000",
+        "baromrelin": "1023.5",
+        "tempf": "55.6",
+        "dewPoint": "44.82",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1622549400000",
+        "baromrelin": "1023.4",
+        "tempf": "55.6",
+        "dewPoint": "44.42",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1622549100000",
+        "baromrelin": "1023.2",
+        "tempf": "55.2",
+        "dewPoint": "44.04",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1622548800000",
+        "baromrelin": "1023.2",
+        "tempf": "55.8",
+        "dewPoint": "45.78",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622548500000",
+        "baromrelin": "1022.8",
+        "tempf": "54.7",
+        "dewPoint": "44.73",
+        "windspeedmph": "0.2"
+    },
+    {
+        "dateutc": "1622201400000",
+        "baromrelin": "1020.7",
+        "tempf": "39.7",
+        "dewPoint": "30.02",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622201100000",
+        "baromrelin": "1020.5",
+        "tempf": "39.9",
+        "dewPoint": "29.85",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622200800000",
+        "baromrelin": "1020.6",
+        "tempf": "39.9",
+        "dewPoint": "29.85",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622200500000",
+        "baromrelin": "1020.8",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622200200000",
+        "baromrelin": "1020.8",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622199900000",
+        "baromrelin": "1021",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622199600000",
+        "baromrelin": "1021",
+        "tempf": "40.1",
+        "dewPoint": "30.76",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622199300000",
+        "baromrelin": "1020.9",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622199000000",
+        "baromrelin": "1020.9",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622198700000",
+        "baromrelin": "1020.8",
+        "tempf": "39.9",
+        "dewPoint": "30.21",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622198400000",
+        "baromrelin": "1020.8",
+        "tempf": "39.9",
+        "dewPoint": "30.57",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622198100000",
+        "baromrelin": "1020.6",
+        "tempf": "39.9",
+        "dewPoint": "30.57",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622197800000",
+        "baromrelin": "1020.6",
+        "tempf": "39.9",
+        "dewPoint": "30.57",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622197500000",
+        "baromrelin": "1020.2",
+        "tempf": "39.7",
+        "dewPoint": "30.73",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622197200000",
+        "baromrelin": "1019.9",
+        "tempf": "39.7",
+        "dewPoint": "30.38",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622196900000",
+        "baromrelin": "1020.2",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622196600000",
+        "baromrelin": "1019.9",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622196300000",
+        "baromrelin": "1020",
+        "tempf": "39.9",
+        "dewPoint": "30.57",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622196000000",
+        "baromrelin": "1019.8",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622195700000",
+        "baromrelin": "1020",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622195400000",
+        "baromrelin": "1019.7",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622195100000",
+        "baromrelin": "1019.8",
+        "tempf": "40.1",
+        "dewPoint": "31.11",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622194800000",
+        "baromrelin": "1019.6",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622194500000",
+        "baromrelin": "1019.7",
+        "tempf": "39.9",
+        "dewPoint": "30.92",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622194200000",
+        "baromrelin": "1019.3",
+        "tempf": "40.1",
+        "dewPoint": "31.47",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622193900000",
+        "baromrelin": "1019.3",
+        "tempf": "40.1",
+        "dewPoint": "31.47",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622193600000",
+        "baromrelin": "1019.4",
+        "tempf": "40.1",
+        "dewPoint": "31.47",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622193300000",
+        "baromrelin": "1019.3",
+        "tempf": "40.1",
+        "dewPoint": "31.11",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622193000000",
+        "baromrelin": "1019.4",
+        "tempf": "40.1",
+        "dewPoint": "31.47",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622192700000",
+        "baromrelin": "1019.7",
+        "tempf": "40.1",
+        "dewPoint": "31.47",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622192400000",
+        "baromrelin": "1019.4",
+        "tempf": "40.3",
+        "dewPoint": "31.66",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622192100000",
+        "baromrelin": "1019.4",
+        "tempf": "40.3",
+        "dewPoint": "31.66",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622191800000",
+        "baromrelin": "1019.4",
+        "tempf": "40.5",
+        "dewPoint": "31.85",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622191500000",
+        "baromrelin": "1019.2",
+        "tempf": "40.6",
+        "dewPoint": "31.95",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622191200000",
+        "baromrelin": "1019.3",
+        "tempf": "40.8",
+        "dewPoint": "31.79",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622190900000",
+        "baromrelin": "1019.5",
+        "tempf": "40.8",
+        "dewPoint": "31.79",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622190600000",
+        "baromrelin": "1019.6",
+        "tempf": "40.8",
+        "dewPoint": "31.79",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622190300000",
+        "baromrelin": "1019.5",
+        "tempf": "40.8",
+        "dewPoint": "32.14",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622190000000",
+        "baromrelin": "1019.7",
+        "tempf": "41",
+        "dewPoint": "32.68",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622189700000",
+        "baromrelin": "1019.6",
+        "tempf": "41",
+        "dewPoint": "32.33",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622189400000",
+        "baromrelin": "1019.3",
+        "tempf": "41.2",
+        "dewPoint": "32.52",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622189100000",
+        "baromrelin": "1020",
+        "tempf": "41.4",
+        "dewPoint": "32.71",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622188800000",
+        "baromrelin": "1020",
+        "tempf": "41.5",
+        "dewPoint": "32.46",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622188500000",
+        "baromrelin": "1019.8",
+        "tempf": "41.5",
+        "dewPoint": "32.81",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622188200000",
+        "baromrelin": "1020",
+        "tempf": "41.7",
+        "dewPoint": "33",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622187900000",
+        "baromrelin": "1019.9",
+        "tempf": "41.9",
+        "dewPoint": "32.84",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622187600000",
+        "baromrelin": "1019.8",
+        "tempf": "41.9",
+        "dewPoint": "32.84",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622187300000",
+        "baromrelin": "1019.8",
+        "tempf": "42.3",
+        "dewPoint": "33.22",
+        "windspeedmph": "6.7"
+    },
+    {
+        "dateutc": "1622187000000",
+        "baromrelin": "1019.7",
+        "tempf": "42.3",
+        "dewPoint": "33.22",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622186700000",
+        "baromrelin": "1019.8",
+        "tempf": "42.3",
+        "dewPoint": "33.58",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622186400000",
+        "baromrelin": "1019.7",
+        "tempf": "42.3",
+        "dewPoint": "33.58",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622186100000",
+        "baromrelin": "1019.5",
+        "tempf": "42.4",
+        "dewPoint": "34.02",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622185800000",
+        "baromrelin": "1019.8",
+        "tempf": "42.3",
+        "dewPoint": "33.93",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622185500000",
+        "baromrelin": "1019.5",
+        "tempf": "42.4",
+        "dewPoint": "34.37",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622185200000",
+        "baromrelin": "1019.7",
+        "tempf": "42.4",
+        "dewPoint": "34.37",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622184900000",
+        "baromrelin": "1019.5",
+        "tempf": "42.4",
+        "dewPoint": "34.71",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622184600000",
+        "baromrelin": "1019.7",
+        "tempf": "42.4",
+        "dewPoint": "34.71",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622184300000",
+        "baromrelin": "1019.5",
+        "tempf": "42.4",
+        "dewPoint": "34.71",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622184000000",
+        "baromrelin": "1019.5",
+        "tempf": "42.4",
+        "dewPoint": "34.71",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622183700000",
+        "baromrelin": "1019.3",
+        "tempf": "42.6",
+        "dewPoint": "35.24",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622183400000",
+        "baromrelin": "1019.2",
+        "tempf": "42.8",
+        "dewPoint": "35.1",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622183100000",
+        "baromrelin": "1019.5",
+        "tempf": "43",
+        "dewPoint": "34.95",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622182800000",
+        "baromrelin": "1019.4",
+        "tempf": "43.2",
+        "dewPoint": "35.14",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622182500000",
+        "baromrelin": "1019.6",
+        "tempf": "43.2",
+        "dewPoint": "35.14",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622182200000",
+        "baromrelin": "1019.5",
+        "tempf": "43.3",
+        "dewPoint": "35.24",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622181900000",
+        "baromrelin": "1019.5",
+        "tempf": "43.3",
+        "dewPoint": "34.89",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622181600000",
+        "baromrelin": "1019.8",
+        "tempf": "43.5",
+        "dewPoint": "35.43",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622181300000",
+        "baromrelin": "1019.6",
+        "tempf": "43.7",
+        "dewPoint": "35.62",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622181000000",
+        "baromrelin": "1019.6",
+        "tempf": "43.7",
+        "dewPoint": "35.27",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622180700000",
+        "baromrelin": "1019.3",
+        "tempf": "43.9",
+        "dewPoint": "35.47",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622180400000",
+        "baromrelin": "1019.4",
+        "tempf": "43.9",
+        "dewPoint": "35.47",
+        "windspeedmph": "2.7"
+    },
+    {
+        "dateutc": "1622180100000",
+        "baromrelin": "1019.5",
+        "tempf": "44.1",
+        "dewPoint": "35.66",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622179800000",
+        "baromrelin": "1019.6",
+        "tempf": "44.1",
+        "dewPoint": "35.66",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622179500000",
+        "baromrelin": "1019.4",
+        "tempf": "44.2",
+        "dewPoint": "35.4",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622179200000",
+        "baromrelin": "1019.4",
+        "tempf": "44.4",
+        "dewPoint": "35.6",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622178900000",
+        "baromrelin": "1019.3",
+        "tempf": "44.4",
+        "dewPoint": "35.6",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622178600000",
+        "baromrelin": "1019.4",
+        "tempf": "44.6",
+        "dewPoint": "36.14",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622178300000",
+        "baromrelin": "1019.4",
+        "tempf": "45",
+        "dewPoint": "36.17",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622178000000",
+        "baromrelin": "1019",
+        "tempf": "45",
+        "dewPoint": "35.81",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622177700000",
+        "baromrelin": "1019.1",
+        "tempf": "45.3",
+        "dewPoint": "36.1",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622177400000",
+        "baromrelin": "1018.9",
+        "tempf": "45.3",
+        "dewPoint": "36.1",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622177100000",
+        "baromrelin": "1019",
+        "tempf": "45.5",
+        "dewPoint": "36.29",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622176800000",
+        "baromrelin": "1018.9",
+        "tempf": "45.5",
+        "dewPoint": "35.93",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622176500000",
+        "baromrelin": "1019.1",
+        "tempf": "45.7",
+        "dewPoint": "36.12",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622176200000",
+        "baromrelin": "1019.3",
+        "tempf": "45.9",
+        "dewPoint": "36.31",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622175900000",
+        "baromrelin": "1019.1",
+        "tempf": "45.9",
+        "dewPoint": "35.57",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622175600000",
+        "baromrelin": "1019",
+        "tempf": "45.9",
+        "dewPoint": "35.94",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622175300000",
+        "baromrelin": "1019.1",
+        "tempf": "45.9",
+        "dewPoint": "35.94",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622175000000",
+        "baromrelin": "1019.3",
+        "tempf": "45.9",
+        "dewPoint": "35.94",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622174700000",
+        "baromrelin": "1019.4",
+        "tempf": "46",
+        "dewPoint": "35.67",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622174340000",
+        "baromrelin": "1019.2",
+        "tempf": "46",
+        "dewPoint": "35.67",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622174100000",
+        "baromrelin": "1019.3",
+        "tempf": "46.2",
+        "dewPoint": "35.86",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622173800000",
+        "baromrelin": "1019.1",
+        "tempf": "46.2",
+        "dewPoint": "35.86",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622173500000",
+        "baromrelin": "1019.4",
+        "tempf": "46.2",
+        "dewPoint": "36.23",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622173200000",
+        "baromrelin": "1019.3",
+        "tempf": "46",
+        "dewPoint": "35.67",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622172900000",
+        "baromrelin": "1019.5",
+        "tempf": "46.2",
+        "dewPoint": "36.23",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622172600000",
+        "baromrelin": "1019.4",
+        "tempf": "46",
+        "dewPoint": "36.04",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622172300000",
+        "baromrelin": "1019.4",
+        "tempf": "46",
+        "dewPoint": "36.77",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622172000000",
+        "baromrelin": "1019.4",
+        "tempf": "46.4",
+        "dewPoint": "36.42",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622171700000",
+        "baromrelin": "1019.6",
+        "tempf": "46.4",
+        "dewPoint": "36.05",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622171400000",
+        "baromrelin": "1019.7",
+        "tempf": "46.4",
+        "dewPoint": "36.42",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622171100000",
+        "baromrelin": "1019.4",
+        "tempf": "46.4",
+        "dewPoint": "36.79",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622170800000",
+        "baromrelin": "1019.8",
+        "tempf": "46.8",
+        "dewPoint": "36.8",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622170500000",
+        "baromrelin": "1019.6",
+        "tempf": "47.1",
+        "dewPoint": "37.09",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622170200000",
+        "baromrelin": "1019.5",
+        "tempf": "47.3",
+        "dewPoint": "36.91",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622169900000",
+        "baromrelin": "1019.6",
+        "tempf": "47.1",
+        "dewPoint": "36.71",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622169600000",
+        "baromrelin": "1019.5",
+        "tempf": "47.3",
+        "dewPoint": "36.91",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622169300000",
+        "baromrelin": "1019.6",
+        "tempf": "47.5",
+        "dewPoint": "37.1",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622169000000",
+        "baromrelin": "1019.7",
+        "tempf": "47.8",
+        "dewPoint": "37",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622168700000",
+        "baromrelin": "1019.6",
+        "tempf": "47.8",
+        "dewPoint": "37",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622168400000",
+        "baromrelin": "1019.7",
+        "tempf": "48.2",
+        "dewPoint": "36.99",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622168100000",
+        "baromrelin": "1019.6",
+        "tempf": "48.2",
+        "dewPoint": "36.99",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622167800000",
+        "baromrelin": "1019.5",
+        "tempf": "48.2",
+        "dewPoint": "36.99",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622167500000",
+        "baromrelin": "1019.3",
+        "tempf": "48.7",
+        "dewPoint": "37.08",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622167200000",
+        "baromrelin": "1019.3",
+        "tempf": "48",
+        "dewPoint": "36.8",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622166900000",
+        "baromrelin": "1019",
+        "tempf": "48.2",
+        "dewPoint": "36.99",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622166600000",
+        "baromrelin": "1019",
+        "tempf": "48.4",
+        "dewPoint": "37.57",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622166300000",
+        "baromrelin": "1018.9",
+        "tempf": "48.9",
+        "dewPoint": "37.27",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622166000000",
+        "baromrelin": "1019",
+        "tempf": "48.9",
+        "dewPoint": "36.87",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622165700000",
+        "baromrelin": "1019",
+        "tempf": "49.1",
+        "dewPoint": "37.45",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622165400000",
+        "baromrelin": "1018.7",
+        "tempf": "49.1",
+        "dewPoint": "37.45",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622165100000",
+        "baromrelin": "1018.6",
+        "tempf": "49.3",
+        "dewPoint": "37.24",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622164800000",
+        "baromrelin": "1018.6",
+        "tempf": "49.5",
+        "dewPoint": "37.83",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622164500000",
+        "baromrelin": "1018.4",
+        "tempf": "49.8",
+        "dewPoint": "37.72",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622164200000",
+        "baromrelin": "1018.2",
+        "tempf": "49.8",
+        "dewPoint": "37.31",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622163900000",
+        "baromrelin": "1018.4",
+        "tempf": "50",
+        "dewPoint": "37.91",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622163600000",
+        "baromrelin": "1018.2",
+        "tempf": "50.2",
+        "dewPoint": "37.69",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622163300000",
+        "baromrelin": "1018.1",
+        "tempf": "50.5",
+        "dewPoint": "37.97",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622163000000",
+        "baromrelin": "1018.2",
+        "tempf": "50.7",
+        "dewPoint": "37.75",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622162700000",
+        "baromrelin": "1018.1",
+        "tempf": "51.1",
+        "dewPoint": "38.12",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622162400000",
+        "baromrelin": "1018.2",
+        "tempf": "51.3",
+        "dewPoint": "37.89",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622162100000",
+        "baromrelin": "1018",
+        "tempf": "51.6",
+        "dewPoint": "37.75",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622161800000",
+        "baromrelin": "1018.1",
+        "tempf": "52",
+        "dewPoint": "37.69",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622161500000",
+        "baromrelin": "1017.9",
+        "tempf": "52.2",
+        "dewPoint": "37.43",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622161200000",
+        "baromrelin": "1017.8",
+        "tempf": "52.5",
+        "dewPoint": "37.26",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622160900000",
+        "baromrelin": "1017.8",
+        "tempf": "52.7",
+        "dewPoint": "37.9",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622160600000",
+        "baromrelin": "1017.8",
+        "tempf": "53.2",
+        "dewPoint": "37.46",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622160300000",
+        "baromrelin": "1017.7",
+        "tempf": "53.4",
+        "dewPoint": "37.18",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622160000000",
+        "baromrelin": "1017.7",
+        "tempf": "53.6",
+        "dewPoint": "37.36",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622159700000",
+        "baromrelin": "1017.8",
+        "tempf": "54",
+        "dewPoint": "37.26",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622159400000",
+        "baromrelin": "1017.7",
+        "tempf": "54.7",
+        "dewPoint": "37.91",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622159100000",
+        "baromrelin": "1017.7",
+        "tempf": "55",
+        "dewPoint": "37.7",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622158800000",
+        "baromrelin": "1017.8",
+        "tempf": "55.6",
+        "dewPoint": "38.26",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622158500000",
+        "baromrelin": "1017.7",
+        "tempf": "55.4",
+        "dewPoint": "37.58",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622158200000",
+        "baromrelin": "1017.8",
+        "tempf": "55.9",
+        "dewPoint": "38.04",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622157900000",
+        "baromrelin": "1017.6",
+        "tempf": "56.3",
+        "dewPoint": "37.9",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622157600000",
+        "baromrelin": "1017.4",
+        "tempf": "55.8",
+        "dewPoint": "37.95",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622157300000",
+        "baromrelin": "1017.8",
+        "tempf": "55.6",
+        "dewPoint": "37.76",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622157000000",
+        "baromrelin": "1017.5",
+        "tempf": "55.4",
+        "dewPoint": "37.58",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622156700000",
+        "baromrelin": "1017.6",
+        "tempf": "55.6",
+        "dewPoint": "37.26",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622156400000",
+        "baromrelin": "1017.4",
+        "tempf": "55.8",
+        "dewPoint": "37.44",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622156100000",
+        "baromrelin": "1017.7",
+        "tempf": "56.1",
+        "dewPoint": "37.72",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622155800000",
+        "baromrelin": "1017.5",
+        "tempf": "56.5",
+        "dewPoint": "37.57",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622155500000",
+        "baromrelin": "1017.3",
+        "tempf": "57.6",
+        "dewPoint": "37.52",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622155200000",
+        "baromrelin": "1017",
+        "tempf": "57.7",
+        "dewPoint": "37.61",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622154900000",
+        "baromrelin": "1017.5",
+        "tempf": "57.4",
+        "dewPoint": "37.34",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622154600000",
+        "baromrelin": "1017.7",
+        "tempf": "57.9",
+        "dewPoint": "37.79",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622154300000",
+        "baromrelin": "1017.3",
+        "tempf": "58.3",
+        "dewPoint": "38.16",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622154000000",
+        "baromrelin": "1017.4",
+        "tempf": "57.7",
+        "dewPoint": "37.06",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622153700000",
+        "baromrelin": "1017.5",
+        "tempf": "58.5",
+        "dewPoint": "38.34",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622153400000",
+        "baromrelin": "1017.4",
+        "tempf": "58.1",
+        "dewPoint": "38.51",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622153100000",
+        "baromrelin": "1017.2",
+        "tempf": "58.8",
+        "dewPoint": "38.07",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622152800000",
+        "baromrelin": "1017.2",
+        "tempf": "59",
+        "dewPoint": "38.8",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622152500000",
+        "baromrelin": "1017.2",
+        "tempf": "58.3",
+        "dewPoint": "38.16",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622152200000",
+        "baromrelin": "1017.3",
+        "tempf": "58.3",
+        "dewPoint": "38.7",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622151900000",
+        "baromrelin": "1017.3",
+        "tempf": "58.8",
+        "dewPoint": "38.62",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622151600000",
+        "baromrelin": "1017.2",
+        "tempf": "59",
+        "dewPoint": "38.8",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622151300000",
+        "baromrelin": "1017.2",
+        "tempf": "58.6",
+        "dewPoint": "38.97",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622151000000",
+        "baromrelin": "1017.2",
+        "tempf": "58.5",
+        "dewPoint": "38.34",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622150700000",
+        "baromrelin": "1017.4",
+        "tempf": "59.4",
+        "dewPoint": "39.7",
+        "windspeedmph": "16.3"
+    },
+    {
+        "dateutc": "1622150400000",
+        "baromrelin": "1017.3",
+        "tempf": "59.2",
+        "dewPoint": "38.98",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622150100000",
+        "baromrelin": "1017.2",
+        "tempf": "59.7",
+        "dewPoint": "38.89",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622149800000",
+        "baromrelin": "1017.3",
+        "tempf": "59.4",
+        "dewPoint": "38.61",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622149500000",
+        "baromrelin": "1017.2",
+        "tempf": "59.5",
+        "dewPoint": "38.7",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622149200000",
+        "baromrelin": "1017.4",
+        "tempf": "59.9",
+        "dewPoint": "39.62",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622148900000",
+        "baromrelin": "1017.2",
+        "tempf": "60.1",
+        "dewPoint": "38.69",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622148600000",
+        "baromrelin": "1017.4",
+        "tempf": "59.5",
+        "dewPoint": "38.7",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622148300000",
+        "baromrelin": "1017.5",
+        "tempf": "60.3",
+        "dewPoint": "39.43",
+        "windspeedmph": "12.1"
+    },
+    {
+        "dateutc": "1622148000000",
+        "baromrelin": "1017.6",
+        "tempf": "60.3",
+        "dewPoint": "38.87",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622147700000",
+        "baromrelin": "1017.4",
+        "tempf": "59.7",
+        "dewPoint": "38.33",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622147400000",
+        "baromrelin": "1017.3",
+        "tempf": "60.3",
+        "dewPoint": "39.99",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622147100000",
+        "baromrelin": "1017.2",
+        "tempf": "60.3",
+        "dewPoint": "39.43",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622146800000",
+        "baromrelin": "1017.2",
+        "tempf": "59.9",
+        "dewPoint": "39.62",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622146500000",
+        "baromrelin": "1017",
+        "tempf": "59.9",
+        "dewPoint": "40.16",
+        "windspeedmph": "13.4"
+    },
+    {
+        "dateutc": "1622146200000",
+        "baromrelin": "1017.3",
+        "tempf": "60.3",
+        "dewPoint": "40.53",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622145900000",
+        "baromrelin": "1016.9",
+        "tempf": "60.6",
+        "dewPoint": "41.33",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622145600000",
+        "baromrelin": "1017",
+        "tempf": "59.9",
+        "dewPoint": "41.73",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622145300000",
+        "baromrelin": "1017.1",
+        "tempf": "59.7",
+        "dewPoint": "41.54",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622145000000",
+        "baromrelin": "1017.1",
+        "tempf": "59.5",
+        "dewPoint": "41.86",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622144700000",
+        "baromrelin": "1017",
+        "tempf": "60.1",
+        "dewPoint": "41.91",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622144400000",
+        "baromrelin": "1016.7",
+        "tempf": "60.6",
+        "dewPoint": "41.86",
+        "windspeedmph": "13.6"
+    },
+    {
+        "dateutc": "1622144100000",
+        "baromrelin": "1016.8",
+        "tempf": "61",
+        "dewPoint": "42.23",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622143800000",
+        "baromrelin": "1016.9",
+        "tempf": "60.4",
+        "dewPoint": "42.19",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622143500000",
+        "baromrelin": "1016.9",
+        "tempf": "59.7",
+        "dewPoint": "42.05",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622143200000",
+        "baromrelin": "1016.8",
+        "tempf": "59.2",
+        "dewPoint": "42.56",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622142900000",
+        "baromrelin": "1017",
+        "tempf": "59.5",
+        "dewPoint": "42.35",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622142600000",
+        "baromrelin": "1017",
+        "tempf": "60.1",
+        "dewPoint": "42.91",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622142300000",
+        "baromrelin": "1017.2",
+        "tempf": "61",
+        "dewPoint": "44.23",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622142000000",
+        "baromrelin": "1017.2",
+        "tempf": "60.1",
+        "dewPoint": "43.4",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622141700000",
+        "baromrelin": "1017.1",
+        "tempf": "58.8",
+        "dewPoint": "42.67",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622141400000",
+        "baromrelin": "1017.2",
+        "tempf": "60.4",
+        "dewPoint": "43.68",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622141100000",
+        "baromrelin": "1017",
+        "tempf": "59",
+        "dewPoint": "41.89",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622140800000",
+        "baromrelin": "1017.3",
+        "tempf": "59.9",
+        "dewPoint": "43.21",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622140500000",
+        "baromrelin": "1017.2",
+        "tempf": "61.3",
+        "dewPoint": "41.98",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622140200000",
+        "baromrelin": "1017",
+        "tempf": "60.1",
+        "dewPoint": "41.91",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622139900000",
+        "baromrelin": "1017.5",
+        "tempf": "59.7",
+        "dewPoint": "41.54",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622139600000",
+        "baromrelin": "1017.5",
+        "tempf": "60.4",
+        "dewPoint": "43.19",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622139300000",
+        "baromrelin": "1017.4",
+        "tempf": "60.8",
+        "dewPoint": "43.56",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622139000000",
+        "baromrelin": "1017.4",
+        "tempf": "60.6",
+        "dewPoint": "42.88",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622138700000",
+        "baromrelin": "1017.6",
+        "tempf": "60.3",
+        "dewPoint": "42.1",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622138400000",
+        "baromrelin": "1017.5",
+        "tempf": "59.9",
+        "dewPoint": "42.73",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622138100000",
+        "baromrelin": "1017.3",
+        "tempf": "59.7",
+        "dewPoint": "44.9",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622137800000",
+        "baromrelin": "1017.4",
+        "tempf": "59.7",
+        "dewPoint": "44.44",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622137500000",
+        "baromrelin": "1017.3",
+        "tempf": "59.2",
+        "dewPoint": "44.43",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622137200000",
+        "baromrelin": "1017.3",
+        "tempf": "59.5",
+        "dewPoint": "44.25",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622136900000",
+        "baromrelin": "1017.4",
+        "tempf": "59.4",
+        "dewPoint": "44.16",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622136600000",
+        "baromrelin": "1017.3",
+        "tempf": "58.1",
+        "dewPoint": "43.85",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622136300000",
+        "baromrelin": "1017.4",
+        "tempf": "58.6",
+        "dewPoint": "44.76",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622135700000",
+        "baromrelin": "1017.3",
+        "tempf": "58.8",
+        "dewPoint": "44.5",
+        "windspeedmph": "11.4"
+    },
+    {
+        "dateutc": "1622135400000",
+        "baromrelin": "1017.3",
+        "tempf": "58.3",
+        "dewPoint": "44.91",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622135100000",
+        "baromrelin": "1017.2",
+        "tempf": "57.7",
+        "dewPoint": "44.77",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622134800000",
+        "baromrelin": "1017.4",
+        "tempf": "57.7",
+        "dewPoint": "43.91",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622134500000",
+        "baromrelin": "1017.4",
+        "tempf": "58.1",
+        "dewPoint": "44.29",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622134200000",
+        "baromrelin": "1017.3",
+        "tempf": "58.1",
+        "dewPoint": "43.85",
+        "windspeedmph": "11"
+    },
+    {
+        "dateutc": "1622133900000",
+        "baromrelin": "1017.5",
+        "tempf": "57.2",
+        "dewPoint": "43.87",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622133600000",
+        "baromrelin": "1017.4",
+        "tempf": "56.8",
+        "dewPoint": "43.92",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622133300000",
+        "baromrelin": "1017.3",
+        "tempf": "57.2",
+        "dewPoint": "44.72",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622133000000",
+        "baromrelin": "1017.1",
+        "tempf": "57.2",
+        "dewPoint": "43.87",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622132700000",
+        "baromrelin": "1017.2",
+        "tempf": "56.8",
+        "dewPoint": "44.34",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622132400000",
+        "baromrelin": "1017.5",
+        "tempf": "56.8",
+        "dewPoint": "44.34",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622132100000",
+        "baromrelin": "1017.4",
+        "tempf": "57.6",
+        "dewPoint": "44.25",
+        "windspeedmph": "17.2"
+    },
+    {
+        "dateutc": "1622131800000",
+        "baromrelin": "1017.4",
+        "tempf": "57.6",
+        "dewPoint": "43.82",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622131500000",
+        "baromrelin": "1017.4",
+        "tempf": "57.7",
+        "dewPoint": "44.34",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622131200000",
+        "baromrelin": "1017.4",
+        "tempf": "56.5",
+        "dewPoint": "43.21",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622130900000",
+        "baromrelin": "1017.6",
+        "tempf": "56.1",
+        "dewPoint": "44.09",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622130600000",
+        "baromrelin": "1017.5",
+        "tempf": "55.9",
+        "dewPoint": "44.31",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622130300000",
+        "baromrelin": "1017.6",
+        "tempf": "56.3",
+        "dewPoint": "44.28",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622130000000",
+        "baromrelin": "1017.6",
+        "tempf": "56.8",
+        "dewPoint": "43.92",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622129700000",
+        "baromrelin": "1017.5",
+        "tempf": "56.3",
+        "dewPoint": "43.45",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622129400000",
+        "baromrelin": "1017.4",
+        "tempf": "55.8",
+        "dewPoint": "44.21",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622129100000",
+        "baromrelin": "1017.5",
+        "tempf": "55.9",
+        "dewPoint": "43.07",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622128800000",
+        "baromrelin": "1017.5",
+        "tempf": "55.4",
+        "dewPoint": "42.6",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622128500000",
+        "baromrelin": "1017.3",
+        "tempf": "55.6",
+        "dewPoint": "43.62",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622128200000",
+        "baromrelin": "1017.3",
+        "tempf": "55.2",
+        "dewPoint": "44.44",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622127900000",
+        "baromrelin": "1017.5",
+        "tempf": "55.4",
+        "dewPoint": "43.43",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622127600000",
+        "baromrelin": "1017.6",
+        "tempf": "54.7",
+        "dewPoint": "43.57",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622127300000",
+        "baromrelin": "1017.5",
+        "tempf": "55",
+        "dewPoint": "44.25",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622127000000",
+        "baromrelin": "1017.6",
+        "tempf": "54.5",
+        "dewPoint": "43.77",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622126700000",
+        "baromrelin": "1017.6",
+        "tempf": "53.8",
+        "dewPoint": "43.1",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622126400000",
+        "baromrelin": "1017.4",
+        "tempf": "53.6",
+        "dewPoint": "43.3",
+        "windspeedmph": "13.2"
+    },
+    {
+        "dateutc": "1622126100000",
+        "baromrelin": "1017.5",
+        "tempf": "53.6",
+        "dewPoint": "42.91",
+        "windspeedmph": "13.4"
+    },
+    {
+        "dateutc": "1622125800000",
+        "baromrelin": "1017.5",
+        "tempf": "54.1",
+        "dewPoint": "43.39",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622125500000",
+        "baromrelin": "1017.5",
+        "tempf": "54",
+        "dewPoint": "43.68",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622125200000",
+        "baromrelin": "1017.6",
+        "tempf": "53.1",
+        "dewPoint": "43.58",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622124900000",
+        "baromrelin": "1017.7",
+        "tempf": "52.9",
+        "dewPoint": "43.76",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622124600000",
+        "baromrelin": "1017.4",
+        "tempf": "52.9",
+        "dewPoint": "43.76",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622124300000",
+        "baromrelin": "1017.4",
+        "tempf": "53.8",
+        "dewPoint": "44.25",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622124000000",
+        "baromrelin": "1017.3",
+        "tempf": "53.8",
+        "dewPoint": "43.87",
+        "windspeedmph": "12.5"
+    },
+    {
+        "dateutc": "1622123700000",
+        "baromrelin": "1017.1",
+        "tempf": "53.6",
+        "dewPoint": "43.68",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622123400000",
+        "baromrelin": "1017.5",
+        "tempf": "54",
+        "dewPoint": "44.06",
+        "windspeedmph": "13.2"
+    },
+    {
+        "dateutc": "1622123100000",
+        "baromrelin": "1017.3",
+        "tempf": "54.7",
+        "dewPoint": "44.35",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622122800000",
+        "baromrelin": "1017",
+        "tempf": "54",
+        "dewPoint": "44.06",
+        "windspeedmph": "12.8"
+    },
+    {
+        "dateutc": "1622122500000",
+        "baromrelin": "1017.3",
+        "tempf": "53.8",
+        "dewPoint": "44.25",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622122200000",
+        "baromrelin": "1016.9",
+        "tempf": "53.4",
+        "dewPoint": "43.86",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622121900000",
+        "baromrelin": "1016.6",
+        "tempf": "54.5",
+        "dewPoint": "44.92",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622121600000",
+        "baromrelin": "1016.8",
+        "tempf": "54",
+        "dewPoint": "44.81",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622121300000",
+        "baromrelin": "1016.4",
+        "tempf": "53.2",
+        "dewPoint": "44.04",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622121000000",
+        "baromrelin": "1016.7",
+        "tempf": "53.1",
+        "dewPoint": "44.31",
+        "windspeedmph": "13.9"
+    },
+    {
+        "dateutc": "1622120700000",
+        "baromrelin": "1016.6",
+        "tempf": "52.9",
+        "dewPoint": "44.48",
+        "windspeedmph": "13.4"
+    },
+    {
+        "dateutc": "1622120400000",
+        "baromrelin": "1016.7",
+        "tempf": "53.1",
+        "dewPoint": "44.68",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622120100000",
+        "baromrelin": "1016.6",
+        "tempf": "53.1",
+        "dewPoint": "44.31",
+        "windspeedmph": "15.7"
+    },
+    {
+        "dateutc": "1622119800000",
+        "baromrelin": "1016.4",
+        "tempf": "52.7",
+        "dewPoint": "44.29",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622119500000",
+        "baromrelin": "1016.6",
+        "tempf": "52.9",
+        "dewPoint": "44.48",
+        "windspeedmph": "12.8"
+    },
+    {
+        "dateutc": "1622119200000",
+        "baromrelin": "1016.1",
+        "tempf": "52.5",
+        "dewPoint": "44.46",
+        "windspeedmph": "11.9"
+    },
+    {
+        "dateutc": "1622118900000",
+        "baromrelin": "1016.5",
+        "tempf": "52.9",
+        "dewPoint": "44.84",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622118600000",
+        "baromrelin": "1016.3",
+        "tempf": "53.4",
+        "dewPoint": "45.32",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622118300000",
+        "baromrelin": "1016.1",
+        "tempf": "53.2",
+        "dewPoint": "45.13",
+        "windspeedmph": "12.5"
+    },
+    {
+        "dateutc": "1622118000000",
+        "baromrelin": "1015.9",
+        "tempf": "53.6",
+        "dewPoint": "45.52",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622117700000",
+        "baromrelin": "1015.9",
+        "tempf": "53.4",
+        "dewPoint": "45.32",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622117400000",
+        "baromrelin": "1015.8",
+        "tempf": "53.4",
+        "dewPoint": "45.68",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622117100000",
+        "baromrelin": "1015.7",
+        "tempf": "53.4",
+        "dewPoint": "46.03",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622116800000",
+        "baromrelin": "1015.7",
+        "tempf": "53.6",
+        "dewPoint": "46.22",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622116500000",
+        "baromrelin": "1015.2",
+        "tempf": "54.1",
+        "dewPoint": "46.7",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622116200000",
+        "baromrelin": "1015.6",
+        "tempf": "54",
+        "dewPoint": "46.61",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622115900000",
+        "baromrelin": "1015.7",
+        "tempf": "54",
+        "dewPoint": "46.61",
+        "windspeedmph": "11.9"
+    },
+    {
+        "dateutc": "1622115600000",
+        "baromrelin": "1015.4",
+        "tempf": "54.1",
+        "dewPoint": "47.05",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622115300000",
+        "baromrelin": "1015.3",
+        "tempf": "54.1",
+        "dewPoint": "47.73",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622115000000",
+        "baromrelin": "1015.2",
+        "tempf": "54.1",
+        "dewPoint": "48.07",
+        "windspeedmph": "11.9"
+    },
+    {
+        "dateutc": "1622114700000",
+        "baromrelin": "1015.1",
+        "tempf": "54.1",
+        "dewPoint": "48.4",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622114400000",
+        "baromrelin": "1015",
+        "tempf": "54.1",
+        "dewPoint": "48.4",
+        "windspeedmph": "11"
+    },
+    {
+        "dateutc": "1622114100000",
+        "baromrelin": "1014.8",
+        "tempf": "54.1",
+        "dewPoint": "48.4",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622113800000",
+        "baromrelin": "1014.8",
+        "tempf": "54.3",
+        "dewPoint": "48.59",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622113500000",
+        "baromrelin": "1014.7",
+        "tempf": "54.3",
+        "dewPoint": "48.59",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622113200000",
+        "baromrelin": "1014.3",
+        "tempf": "54.3",
+        "dewPoint": "48.59",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622112900000",
+        "baromrelin": "1014.3",
+        "tempf": "54.3",
+        "dewPoint": "48.59",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622112600000",
+        "baromrelin": "1014.3",
+        "tempf": "54.3",
+        "dewPoint": "48.59",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622112300000",
+        "baromrelin": "1014.3",
+        "tempf": "54.3",
+        "dewPoint": "48.92",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622112000000",
+        "baromrelin": "1014.3",
+        "tempf": "54.3",
+        "dewPoint": "48.92",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622111700000",
+        "baromrelin": "1014.2",
+        "tempf": "54.1",
+        "dewPoint": "48.73",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622111400000",
+        "baromrelin": "1014.2",
+        "tempf": "54.1",
+        "dewPoint": "48.73",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622111100000",
+        "baromrelin": "1014.1",
+        "tempf": "54.1",
+        "dewPoint": "48.73",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622110800000",
+        "baromrelin": "1014.1",
+        "tempf": "54",
+        "dewPoint": "48.95",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622110500000",
+        "baromrelin": "1014.2",
+        "tempf": "54",
+        "dewPoint": "48.95",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622110200000",
+        "baromrelin": "1014.3",
+        "tempf": "53.8",
+        "dewPoint": "48.76",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622109900000",
+        "baromrelin": "1014",
+        "tempf": "53.6",
+        "dewPoint": "48.88",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622109600000",
+        "baromrelin": "1013.8",
+        "tempf": "53.6",
+        "dewPoint": "48.88",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622109300000",
+        "baromrelin": "1014.1",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "6.7"
+    },
+    {
+        "dateutc": "1622109000000",
+        "baromrelin": "1014.1",
+        "tempf": "53.8",
+        "dewPoint": "48.76",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622108700000",
+        "baromrelin": "1013.9",
+        "tempf": "53.8",
+        "dewPoint": "48.76",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622108400000",
+        "baromrelin": "1014",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622108100000",
+        "baromrelin": "1013.8",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622107800000",
+        "baromrelin": "1013.9",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622107500000",
+        "baromrelin": "1013.6",
+        "tempf": "53.4",
+        "dewPoint": "48.69",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622107200000",
+        "baromrelin": "1013.8",
+        "tempf": "53.2",
+        "dewPoint": "48.49",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622106900000",
+        "baromrelin": "1013.7",
+        "tempf": "53.4",
+        "dewPoint": "48.69",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622106600000",
+        "baromrelin": "1013.4",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622106300000",
+        "baromrelin": "1013.4",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622106000000",
+        "baromrelin": "1013.2",
+        "tempf": "53.6",
+        "dewPoint": "48.56",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622105700000",
+        "baromrelin": "1013.5",
+        "tempf": "53.8",
+        "dewPoint": "48.76",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622105400000",
+        "baromrelin": "1013.4",
+        "tempf": "54",
+        "dewPoint": "48.95",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622105100000",
+        "baromrelin": "1013.1",
+        "tempf": "54",
+        "dewPoint": "48.95",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622104800000",
+        "baromrelin": "1013.3",
+        "tempf": "54.1",
+        "dewPoint": "49.05",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622104500000",
+        "baromrelin": "1013.1",
+        "tempf": "54.3",
+        "dewPoint": "49.25",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622104200000",
+        "baromrelin": "1013.1",
+        "tempf": "54.1",
+        "dewPoint": "49.37",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622103900000",
+        "baromrelin": "1013.1",
+        "tempf": "54.1",
+        "dewPoint": "49.37",
+        "windspeedmph": "6.7"
+    },
+    {
+        "dateutc": "1622103600000",
+        "baromrelin": "1013.2",
+        "tempf": "54.3",
+        "dewPoint": "49.57",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622103300000",
+        "baromrelin": "1013.1",
+        "tempf": "54.5",
+        "dewPoint": "49.76",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622103000000",
+        "baromrelin": "1013",
+        "tempf": "54.7",
+        "dewPoint": "49.96",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622102700000",
+        "baromrelin": "1013.1",
+        "tempf": "54.9",
+        "dewPoint": "50.16",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622102400000",
+        "baromrelin": "1013",
+        "tempf": "55.2",
+        "dewPoint": "50.45",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622102100000",
+        "baromrelin": "1012.9",
+        "tempf": "55.6",
+        "dewPoint": "50.84",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622101800000",
+        "baromrelin": "1012.9",
+        "tempf": "55.9",
+        "dewPoint": "50.81",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622101500000",
+        "baromrelin": "1012.9",
+        "tempf": "56.3",
+        "dewPoint": "50.87",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622101200000",
+        "baromrelin": "1012.6",
+        "tempf": "56.7",
+        "dewPoint": "50.93",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622100900000",
+        "baromrelin": "1012.7",
+        "tempf": "56.8",
+        "dewPoint": "50.7",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622100600000",
+        "baromrelin": "1012.7",
+        "tempf": "57",
+        "dewPoint": "50.89",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622100300000",
+        "baromrelin": "1012.8",
+        "tempf": "57.2",
+        "dewPoint": "51.08",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622100000000",
+        "baromrelin": "1012.7",
+        "tempf": "57.6",
+        "dewPoint": "51.47",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622099700000",
+        "baromrelin": "1012.5",
+        "tempf": "57.7",
+        "dewPoint": "51.23",
+        "windspeedmph": "8.3"
+    },
+    {
+        "dateutc": "1622099400000",
+        "baromrelin": "1012.7",
+        "tempf": "58.1",
+        "dewPoint": "51.62",
+        "windspeedmph": "6.7"
+    },
+    {
+        "dateutc": "1622099100000",
+        "baromrelin": "1012.7",
+        "tempf": "58.5",
+        "dewPoint": "52.01",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622098800000",
+        "baromrelin": "1012.7",
+        "tempf": "58.6",
+        "dewPoint": "52.11",
+        "windspeedmph": "8.3"
+    },
+    {
+        "dateutc": "1622098500000",
+        "baromrelin": "1012.6",
+        "tempf": "59",
+        "dewPoint": "52.49",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622098200000",
+        "baromrelin": "1012.5",
+        "tempf": "59.2",
+        "dewPoint": "52.34",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622097900000",
+        "baromrelin": "1012.4",
+        "tempf": "59.2",
+        "dewPoint": "52.34",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622097600000",
+        "baromrelin": "1012.4",
+        "tempf": "59.7",
+        "dewPoint": "52.48",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622097300000",
+        "baromrelin": "1012.4",
+        "tempf": "59.5",
+        "dewPoint": "52.28",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622097000000",
+        "baromrelin": "1012.2",
+        "tempf": "59.9",
+        "dewPoint": "52.31",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622096700000",
+        "baromrelin": "1012",
+        "tempf": "59.7",
+        "dewPoint": "52.12",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622096400000",
+        "baromrelin": "1012.3",
+        "tempf": "59.7",
+        "dewPoint": "52.48",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622096100000",
+        "baromrelin": "1012",
+        "tempf": "59.7",
+        "dewPoint": "52.48",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622095800000",
+        "baromrelin": "1011.9",
+        "tempf": "60.1",
+        "dewPoint": "52.51",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622095500000",
+        "baromrelin": "1012",
+        "tempf": "60.3",
+        "dewPoint": "52.34",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622095200000",
+        "baromrelin": "1012.2",
+        "tempf": "60.3",
+        "dewPoint": "52.7",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622094900000",
+        "baromrelin": "1011.9",
+        "tempf": "60.6",
+        "dewPoint": "52.99",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622094600000",
+        "baromrelin": "1012.1",
+        "tempf": "60.6",
+        "dewPoint": "52.99",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622094300000",
+        "baromrelin": "1012",
+        "tempf": "60.8",
+        "dewPoint": "53.18",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622094000000",
+        "baromrelin": "1011.8",
+        "tempf": "60.8",
+        "dewPoint": "53.18",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622093700000",
+        "baromrelin": "1011.8",
+        "tempf": "61",
+        "dewPoint": "53.38",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622093400000",
+        "baromrelin": "1011.9",
+        "tempf": "61.2",
+        "dewPoint": "53.57",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622093100000",
+        "baromrelin": "1011.7",
+        "tempf": "61.5",
+        "dewPoint": "53.86",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622092800000",
+        "baromrelin": "1011.5",
+        "tempf": "61.5",
+        "dewPoint": "53.5",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622092500000",
+        "baromrelin": "1011.9",
+        "tempf": "61.9",
+        "dewPoint": "53.88",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622092200000",
+        "baromrelin": "1011.8",
+        "tempf": "61.9",
+        "dewPoint": "53.88",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622091900000",
+        "baromrelin": "1012",
+        "tempf": "62.1",
+        "dewPoint": "53.71",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622091600000",
+        "baromrelin": "1011.9",
+        "tempf": "62.4",
+        "dewPoint": "53.63",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622091300000",
+        "baromrelin": "1011.6",
+        "tempf": "62.6",
+        "dewPoint": "53.44",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622091000000",
+        "baromrelin": "1011.7",
+        "tempf": "62.6",
+        "dewPoint": "53.44",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622090700000",
+        "baromrelin": "1011.6",
+        "tempf": "62.6",
+        "dewPoint": "53.82",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622090400000",
+        "baromrelin": "1011.9",
+        "tempf": "62.4",
+        "dewPoint": "54",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622090100000",
+        "baromrelin": "1011.8",
+        "tempf": "62.4",
+        "dewPoint": "54.37",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622089800000",
+        "baromrelin": "1011.6",
+        "tempf": "62.4",
+        "dewPoint": "54.37",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622089500000",
+        "baromrelin": "1011.7",
+        "tempf": "62.6",
+        "dewPoint": "54.92",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622089200000",
+        "baromrelin": "1011.8",
+        "tempf": "62.8",
+        "dewPoint": "55.12",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1622088900000",
+        "baromrelin": "1011.6",
+        "tempf": "63",
+        "dewPoint": "55.31",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622088600000",
+        "baromrelin": "1011.6",
+        "tempf": "63.1",
+        "dewPoint": "55.41",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622088300000",
+        "baromrelin": "1011.5",
+        "tempf": "63.3",
+        "dewPoint": "55.24",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622087940000",
+        "baromrelin": "1011.6",
+        "tempf": "63.5",
+        "dewPoint": "55.43",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622087700000",
+        "baromrelin": "1011.6",
+        "tempf": "63.5",
+        "dewPoint": "55.43",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622087400000",
+        "baromrelin": "1011.6",
+        "tempf": "63.7",
+        "dewPoint": "55.62",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622087100000",
+        "baromrelin": "1011.6",
+        "tempf": "63.9",
+        "dewPoint": "55.44",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622086800000",
+        "baromrelin": "1011.3",
+        "tempf": "64",
+        "dewPoint": "55.54",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622086500000",
+        "baromrelin": "1011.3",
+        "tempf": "64.2",
+        "dewPoint": "55.73",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622086200000",
+        "baromrelin": "1011.3",
+        "tempf": "64.2",
+        "dewPoint": "56.1",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622085900000",
+        "baromrelin": "1011.2",
+        "tempf": "64.4",
+        "dewPoint": "56.3",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622085600000",
+        "baromrelin": "1011",
+        "tempf": "64.6",
+        "dewPoint": "56.49",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622085300000",
+        "baromrelin": "1011.2",
+        "tempf": "64.8",
+        "dewPoint": "56.31",
+        "windspeedmph": "12.3"
+    },
+    {
+        "dateutc": "1622085000000",
+        "baromrelin": "1011.2",
+        "tempf": "64.9",
+        "dewPoint": "56.41",
+        "windspeedmph": "13.2"
+    },
+    {
+        "dateutc": "1622084700000",
+        "baromrelin": "1011.4",
+        "tempf": "65.1",
+        "dewPoint": "56.6",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622084400000",
+        "baromrelin": "1011.3",
+        "tempf": "65.3",
+        "dewPoint": "57.17",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622084100000",
+        "baromrelin": "1011.2",
+        "tempf": "65.5",
+        "dewPoint": "57.36",
+        "windspeedmph": "11.2"
+    },
+    {
+        "dateutc": "1622083800000",
+        "baromrelin": "1011.1",
+        "tempf": "65.1",
+        "dewPoint": "57.34",
+        "windspeedmph": "13"
+    },
+    {
+        "dateutc": "1622083500000",
+        "baromrelin": "1011.1",
+        "tempf": "65.1",
+        "dewPoint": "58.06",
+        "windspeedmph": "13.9"
+    },
+    {
+        "dateutc": "1622083200000",
+        "baromrelin": "1011.1",
+        "tempf": "65.1",
+        "dewPoint": "58.42",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622082900000",
+        "baromrelin": "1010.8",
+        "tempf": "65.3",
+        "dewPoint": "58.61",
+        "windspeedmph": "11.4"
+    },
+    {
+        "dateutc": "1622082600000",
+        "baromrelin": "1011",
+        "tempf": "65.7",
+        "dewPoint": "58.65",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622082300000",
+        "baromrelin": "1010.8",
+        "tempf": "65.5",
+        "dewPoint": "58.45",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622082000000",
+        "baromrelin": "1010.5",
+        "tempf": "65.3",
+        "dewPoint": "58.61",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622081700000",
+        "baromrelin": "1010.7",
+        "tempf": "65.3",
+        "dewPoint": "58.61",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622081400000",
+        "baromrelin": "1010.8",
+        "tempf": "65.1",
+        "dewPoint": "58.77",
+        "windspeedmph": "11"
+    },
+    {
+        "dateutc": "1622081100000",
+        "baromrelin": "1010.8",
+        "tempf": "64.9",
+        "dewPoint": "59.27",
+        "windspeedmph": "16.8"
+    },
+    {
+        "dateutc": "1622080800000",
+        "baromrelin": "1010.7",
+        "tempf": "64.8",
+        "dewPoint": "59.51",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622080500000",
+        "baromrelin": "1010.5",
+        "tempf": "64.9",
+        "dewPoint": "59.61",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622080200000",
+        "baromrelin": "1010.5",
+        "tempf": "65.1",
+        "dewPoint": "59.46",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622079900000",
+        "baromrelin": "1010.6",
+        "tempf": "65.3",
+        "dewPoint": "59.66",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622079600000",
+        "baromrelin": "1010.9",
+        "tempf": "65.5",
+        "dewPoint": "59.85",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622079300000",
+        "baromrelin": "1010.9",
+        "tempf": "65.5",
+        "dewPoint": "59.85",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622079000000",
+        "baromrelin": "1010.7",
+        "tempf": "65.7",
+        "dewPoint": "59.7",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622078700000",
+        "baromrelin": "1010.6",
+        "tempf": "65.5",
+        "dewPoint": "59.51",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622078400000",
+        "baromrelin": "1010.3",
+        "tempf": "65.7",
+        "dewPoint": "59.7",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622078100000",
+        "baromrelin": "1010.5",
+        "tempf": "65.7",
+        "dewPoint": "59.7",
+        "windspeedmph": "13.6"
+    },
+    {
+        "dateutc": "1622077800000",
+        "baromrelin": "1010.5",
+        "tempf": "65.7",
+        "dewPoint": "59.7",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622077500000",
+        "baromrelin": "1010.5",
+        "tempf": "65.8",
+        "dewPoint": "59.8",
+        "windspeedmph": "10.1"
+    },
+    {
+        "dateutc": "1622077200000",
+        "baromrelin": "1010.6",
+        "tempf": "65.8",
+        "dewPoint": "59.45",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622076900000",
+        "baromrelin": "1010.4",
+        "tempf": "66.2",
+        "dewPoint": "59.84",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622076600000",
+        "baromrelin": "1010.6",
+        "tempf": "66.2",
+        "dewPoint": "59.49",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622076300000",
+        "baromrelin": "1010.5",
+        "tempf": "66.6",
+        "dewPoint": "59.88",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622076000000",
+        "baromrelin": "1010.4",
+        "tempf": "66.7",
+        "dewPoint": "59.62",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622075700000",
+        "baromrelin": "1010.4",
+        "tempf": "66.7",
+        "dewPoint": "59.62",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622075400000",
+        "baromrelin": "1010.5",
+        "tempf": "66.9",
+        "dewPoint": "59.45",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622075100000",
+        "baromrelin": "1010.1",
+        "tempf": "67.1",
+        "dewPoint": "59.64",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622074800000",
+        "baromrelin": "1010.5",
+        "tempf": "67.3",
+        "dewPoint": "59.47",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622074500000",
+        "baromrelin": "1010.2",
+        "tempf": "67.5",
+        "dewPoint": "59.66",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622074200000",
+        "baromrelin": "1010.1",
+        "tempf": "67.6",
+        "dewPoint": "59.39",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622073900000",
+        "baromrelin": "1010.2",
+        "tempf": "67.8",
+        "dewPoint": "59.58",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622073600000",
+        "baromrelin": "1010.2",
+        "tempf": "67.8",
+        "dewPoint": "59.58",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622073300000",
+        "baromrelin": "1009.9",
+        "tempf": "68",
+        "dewPoint": "60.14",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622073000000",
+        "baromrelin": "1009.8",
+        "tempf": "68",
+        "dewPoint": "59.77",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622072700000",
+        "baromrelin": "1009.8",
+        "tempf": "68.2",
+        "dewPoint": "59.96",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622072400000",
+        "baromrelin": "1009.7",
+        "tempf": "68.2",
+        "dewPoint": "59.59",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622072100000",
+        "baromrelin": "1009.6",
+        "tempf": "68.4",
+        "dewPoint": "59.4",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622071800000",
+        "baromrelin": "1009.7",
+        "tempf": "68.5",
+        "dewPoint": "59.11",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622071500000",
+        "baromrelin": "1009.7",
+        "tempf": "68.7",
+        "dewPoint": "59.3",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622071200000",
+        "baromrelin": "1009.6",
+        "tempf": "68.7",
+        "dewPoint": "58.91",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622070900000",
+        "baromrelin": "1010",
+        "tempf": "68.9",
+        "dewPoint": "59.1",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622070600000",
+        "baromrelin": "1009.6",
+        "tempf": "68.9",
+        "dewPoint": "58.7",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622070300000",
+        "baromrelin": "1009.7",
+        "tempf": "68.9",
+        "dewPoint": "58.7",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622070000000",
+        "baromrelin": "1010",
+        "tempf": "69.1",
+        "dewPoint": "59.29",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622069700000",
+        "baromrelin": "1009.9",
+        "tempf": "69.3",
+        "dewPoint": "59.48",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622069400000",
+        "baromrelin": "1009.8",
+        "tempf": "69.6",
+        "dewPoint": "59.77",
+        "windspeedmph": "13"
+    },
+    {
+        "dateutc": "1622069100000",
+        "baromrelin": "1009.5",
+        "tempf": "69.8",
+        "dewPoint": "59.56",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622068800000",
+        "baromrelin": "1009.5",
+        "tempf": "69.6",
+        "dewPoint": "58.97",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622068500000",
+        "baromrelin": "1009.5",
+        "tempf": "69.6",
+        "dewPoint": "59.77",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622068200000",
+        "baromrelin": "1009.7",
+        "tempf": "69.8",
+        "dewPoint": "59.96",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622067900000",
+        "baromrelin": "1009.3",
+        "tempf": "69.8",
+        "dewPoint": "59.96",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622067600000",
+        "baromrelin": "1009.4",
+        "tempf": "69.6",
+        "dewPoint": "60.55",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1622067300000",
+        "baromrelin": "1009.1",
+        "tempf": "69.6",
+        "dewPoint": "61.32",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1622067000000",
+        "baromrelin": "1009.3",
+        "tempf": "69.8",
+        "dewPoint": "61.51",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622066700000",
+        "baromrelin": "1009.5",
+        "tempf": "70",
+        "dewPoint": "62.08",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622066400000",
+        "baromrelin": "1009.6",
+        "tempf": "70.9",
+        "dewPoint": "62.95",
+        "windspeedmph": "10.5"
+    },
+    {
+        "dateutc": "1622066100000",
+        "baromrelin": "1009.6",
+        "tempf": "73.2",
+        "dewPoint": "63.62",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622065800000",
+        "baromrelin": "1009.5",
+        "tempf": "74.1",
+        "dewPoint": "64.88",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622065500000",
+        "baromrelin": "1009.3",
+        "tempf": "75",
+        "dewPoint": "64.94",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622065200000",
+        "baromrelin": "1009.4",
+        "tempf": "75.2",
+        "dewPoint": "65.13",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622064900000",
+        "baromrelin": "1009.4",
+        "tempf": "75.4",
+        "dewPoint": "64.92",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622064600000",
+        "baromrelin": "1009.2",
+        "tempf": "75.6",
+        "dewPoint": "64.7",
+        "windspeedmph": "0.9"
+    },
+    {
+        "dateutc": "1622064300000",
+        "baromrelin": "1009.6",
+        "tempf": "75.6",
+        "dewPoint": "65.11",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622064000000",
+        "baromrelin": "1009.6",
+        "tempf": "76.1",
+        "dewPoint": "65.17",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622063700000",
+        "baromrelin": "1009.5",
+        "tempf": "75.7",
+        "dewPoint": "65.21",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1622063400000",
+        "baromrelin": "1009.6",
+        "tempf": "75.9",
+        "dewPoint": "64.56",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622063100000",
+        "baromrelin": "1009.4",
+        "tempf": "75.9",
+        "dewPoint": "64.98",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622062800000",
+        "baromrelin": "1009.5",
+        "tempf": "77.4",
+        "dewPoint": "65.99",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622062500000",
+        "baromrelin": "1009.4",
+        "tempf": "77.2",
+        "dewPoint": "65.8",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622062200000",
+        "baromrelin": "1009.6",
+        "tempf": "77.7",
+        "dewPoint": "65.85",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622061900000",
+        "baromrelin": "1009.5",
+        "tempf": "77.7",
+        "dewPoint": "65.42",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622061600000",
+        "baromrelin": "1009.4",
+        "tempf": "77.9",
+        "dewPoint": "66.04",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622061300000",
+        "baromrelin": "1009.8",
+        "tempf": "77.2",
+        "dewPoint": "66.22",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622061000000",
+        "baromrelin": "1009.8",
+        "tempf": "77",
+        "dewPoint": "66.03",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1622060700000",
+        "baromrelin": "1010",
+        "tempf": "77.9",
+        "dewPoint": "66.04",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622060400000",
+        "baromrelin": "1009.8",
+        "tempf": "77.5",
+        "dewPoint": "66.09",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1622060100000",
+        "baromrelin": "1010",
+        "tempf": "77",
+        "dewPoint": "65.61",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622059800000",
+        "baromrelin": "1010.3",
+        "tempf": "78.3",
+        "dewPoint": "66.85",
+        "windspeedmph": "14.8"
+    },
+    {
+        "dateutc": "1622059500000",
+        "baromrelin": "1010.2",
+        "tempf": "78.4",
+        "dewPoint": "66.08",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622059200000",
+        "baromrelin": "1010.2",
+        "tempf": "76.3",
+        "dewPoint": "65.36",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622058900000",
+        "baromrelin": "1010.4",
+        "tempf": "77.9",
+        "dewPoint": "66.89",
+        "windspeedmph": "0.9"
+    },
+    {
+        "dateutc": "1622058540000",
+        "baromrelin": "1010.4",
+        "tempf": "77.5",
+        "dewPoint": "66.93",
+        "windspeedmph": "0.2"
+    },
+    {
+        "dateutc": "1622058300000",
+        "baromrelin": "1010.5",
+        "tempf": "79.2",
+        "dewPoint": "66.84",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622058000000",
+        "baromrelin": "1010.7",
+        "tempf": "78.1",
+        "dewPoint": "67.5",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622057700000",
+        "baromrelin": "1010.7",
+        "tempf": "76.1",
+        "dewPoint": "66.8",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622057340000",
+        "baromrelin": "1010.4",
+        "tempf": "76.6",
+        "dewPoint": "67.28",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622057100000",
+        "baromrelin": "1010.7",
+        "tempf": "76.8",
+        "dewPoint": "67.47",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622056800000",
+        "baromrelin": "1010.7",
+        "tempf": "75.2",
+        "dewPoint": "66.33",
+        "windspeedmph": "1.6"
+    },
+    {
+        "dateutc": "1622056500000",
+        "baromrelin": "1010.6",
+        "tempf": "75.4",
+        "dewPoint": "66.13",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622056140000",
+        "baromrelin": "1010.8",
+        "tempf": "74.3",
+        "dewPoint": "66.98",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622055900000",
+        "baromrelin": "1011.1",
+        "tempf": "72.1",
+        "dewPoint": "65.58",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622055600000",
+        "baromrelin": "1010.8",
+        "tempf": "71.1",
+        "dewPoint": "65.32",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622055300000",
+        "baromrelin": "1010.8",
+        "tempf": "68.5",
+        "dewPoint": "65.12",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622054940000",
+        "baromrelin": "1010.9",
+        "tempf": "67.8",
+        "dewPoint": "64.11",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622054700000",
+        "baromrelin": "1011",
+        "tempf": "67.8",
+        "dewPoint": "63.78",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622054400000",
+        "baromrelin": "1011.1",
+        "tempf": "67.8",
+        "dewPoint": "63.78",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622054100000",
+        "baromrelin": "1011",
+        "tempf": "67.6",
+        "dewPoint": "63.91",
+        "windspeedmph": "2.7"
+    },
+    {
+        "dateutc": "1622053800000",
+        "baromrelin": "1011.3",
+        "tempf": "67.6",
+        "dewPoint": "63.59",
+        "windspeedmph": "10.7"
+    },
+    {
+        "dateutc": "1622053500000",
+        "baromrelin": "1011.2",
+        "tempf": "67.6",
+        "dewPoint": "63.91",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622053200000",
+        "baromrelin": "1011.3",
+        "tempf": "67.5",
+        "dewPoint": "63.49",
+        "windspeedmph": "5.6"
+    },
+    {
+        "dateutc": "1622052900000",
+        "baromrelin": "1011.6",
+        "tempf": "67.3",
+        "dewPoint": "63.94",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622052600000",
+        "baromrelin": "1011.3",
+        "tempf": "66.4",
+        "dewPoint": "63.37",
+        "windspeedmph": "4.3"
+    },
+    {
+        "dateutc": "1622052300000",
+        "baromrelin": "1011.6",
+        "tempf": "66",
+        "dewPoint": "63.29",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622052000000",
+        "baromrelin": "1011.3",
+        "tempf": "65.5",
+        "dewPoint": "63.11",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622051700000",
+        "baromrelin": "1011.4",
+        "tempf": "65.1",
+        "dewPoint": "63.33",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622051400000",
+        "baromrelin": "1010.5",
+        "tempf": "75.42",
+        "dewPoint": "69.4",
+        "windspeedmph": "13.34"
+    },
+    {
+        "dateutc": "1622051100000",
+        "baromrelin": "1010.6",
+        "tempf": "75.58",
+        "dewPoint": "69.35",
+        "windspeedmph": "13.36"
+    },
+    {
+        "dateutc": "1622050800000",
+        "baromrelin": "1012.7",
+        "tempf": "80.1",
+        "dewPoint": "63.97",
+        "windspeedmph": "16.3"
+    },
+    {
+        "dateutc": "1622050500000",
+        "baromrelin": "1012.8",
+        "tempf": "80.1",
+        "dewPoint": "63.97",
+        "windspeedmph": "16.3"
+    },
+    {
+        "dateutc": "1622050200000",
+        "baromrelin": "1010.9",
+        "tempf": "80.1",
+        "dewPoint": "63.97",
+        "windspeedmph": "16.3"
+    },
+    {
+        "dateutc": "1622049900000",
+        "baromrelin": "1010.7",
+        "tempf": "76.24",
+        "dewPoint": "69.05",
+        "windspeedmph": "13.47"
+    },
+    {
+        "dateutc": "1622049600000",
+        "baromrelin": "1010.4",
+        "tempf": "85.8",
+        "dewPoint": "66.11",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622049300000",
+        "baromrelin": "1010.4",
+        "tempf": "85.8",
+        "dewPoint": "66.11",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622049000000",
+        "baromrelin": "1010.6",
+        "tempf": "85.8",
+        "dewPoint": "66.11",
+        "windspeedmph": "11.6"
+    },
+    {
+        "dateutc": "1622048700000",
+        "baromrelin": "1010.3",
+        "tempf": "84.9",
+        "dewPoint": "64.72",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622048400000",
+        "baromrelin": "1010.4",
+        "tempf": "85.1",
+        "dewPoint": "64.34",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622048100000",
+        "baromrelin": "1010.5",
+        "tempf": "85.3",
+        "dewPoint": "64.52",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622047800000",
+        "baromrelin": "1010.6",
+        "tempf": "84.4",
+        "dewPoint": "64.82",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622047500000",
+        "baromrelin": "1011",
+        "tempf": "85.1",
+        "dewPoint": "64.34",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622047200000",
+        "baromrelin": "1011.1",
+        "tempf": "84.2",
+        "dewPoint": "64.64",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622046900000",
+        "baromrelin": "1011.1",
+        "tempf": "83.7",
+        "dewPoint": "64.72",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622046600000",
+        "baromrelin": "1011.2",
+        "tempf": "83.7",
+        "dewPoint": "65.26",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622046300000",
+        "baromrelin": "1011.4",
+        "tempf": "84.4",
+        "dewPoint": "65.37",
+        "windspeedmph": "8.3"
+    },
+    {
+        "dateutc": "1622046000000",
+        "baromrelin": "1011.5",
+        "tempf": "83.5",
+        "dewPoint": "65.6",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622045700000",
+        "baromrelin": "1011.7",
+        "tempf": "83.8",
+        "dewPoint": "65.88",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622045400000",
+        "baromrelin": "1011.5",
+        "tempf": "82.6",
+        "dewPoint": "65.8",
+        "windspeedmph": "6.7"
+    },
+    {
+        "dateutc": "1622045100000",
+        "baromrelin": "1011.8",
+        "tempf": "82.6",
+        "dewPoint": "66.3",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1622044800000",
+        "baromrelin": "1011.8",
+        "tempf": "82.2",
+        "dewPoint": "66.42",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622044500000",
+        "baromrelin": "1012.1",
+        "tempf": "82",
+        "dewPoint": "65.74",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622044200000",
+        "baromrelin": "1012.1",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622043900000",
+        "baromrelin": "1011.9",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622043600000",
+        "baromrelin": "1012.1",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622043300000",
+        "baromrelin": "1012.4",
+        "tempf": "80.6",
+        "dewPoint": "65.41",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622043000000",
+        "baromrelin": "1012.3",
+        "tempf": "81",
+        "dewPoint": "65.78",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622042700000",
+        "baromrelin": "1012.1",
+        "tempf": "81.9",
+        "dewPoint": "65.65",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622042400000",
+        "baromrelin": "1012",
+        "tempf": "83.1",
+        "dewPoint": "65.75",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1622042100000",
+        "baromrelin": "1012",
+        "tempf": "85.3",
+        "dewPoint": "66.2",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1622041800000",
+        "baromrelin": "1012.1",
+        "tempf": "84",
+        "dewPoint": "65.54",
+        "windspeedmph": "6"
+    },
+    {
+        "dateutc": "1622041500000",
+        "baromrelin": "1011.9",
+        "tempf": "84",
+        "dewPoint": "66.07",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1622041200000",
+        "baromrelin": "1012.5",
+        "tempf": "83.1",
+        "dewPoint": "65.23",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622040900000",
+        "baromrelin": "1012.3",
+        "tempf": "83.8",
+        "dewPoint": "66.4",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622040600000",
+        "baromrelin": "1012.2",
+        "tempf": "83.5",
+        "dewPoint": "66.12",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622040300000",
+        "baromrelin": "1012.1",
+        "tempf": "82.4",
+        "dewPoint": "66.11",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622040060000",
+        "baromrelin": "1012.3",
+        "tempf": "82.6",
+        "dewPoint": "66.3",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622039700000",
+        "baromrelin": "1012.4",
+        "tempf": "81.3",
+        "dewPoint": "66.54",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1622039400000",
+        "baromrelin": "1012.4",
+        "tempf": "80.6",
+        "dewPoint": "65.88",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622039100000",
+        "baromrelin": "1012.7",
+        "tempf": "81",
+        "dewPoint": "66.73",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622038800000",
+        "baromrelin": "1012.4",
+        "tempf": "81",
+        "dewPoint": "66.26",
+        "windspeedmph": "5.4"
+    },
+    {
+        "dateutc": "1622038500000",
+        "baromrelin": "1012.5",
+        "tempf": "81.3",
+        "dewPoint": "66.54",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622038200000",
+        "baromrelin": "1012.6",
+        "tempf": "81.5",
+        "dewPoint": "66.25",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1622037900000",
+        "baromrelin": "1012.7",
+        "tempf": "81.3",
+        "dewPoint": "65.58",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622037600000",
+        "baromrelin": "1012.7",
+        "tempf": "80.6",
+        "dewPoint": "65.41",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622037300000",
+        "baromrelin": "1012.8",
+        "tempf": "78.6",
+        "dewPoint": "65.38",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622037000000",
+        "baromrelin": "1012.9",
+        "tempf": "78.8",
+        "dewPoint": "66.02",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622036700000",
+        "baromrelin": "1013",
+        "tempf": "77.7",
+        "dewPoint": "65.42",
+        "windspeedmph": "0.9"
+    },
+    {
+        "dateutc": "1622036400000",
+        "baromrelin": "1013.1",
+        "tempf": "77.5",
+        "dewPoint": "65.23",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1622036100000",
+        "baromrelin": "1013",
+        "tempf": "77.4",
+        "dewPoint": "65.13",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622035800000",
+        "baromrelin": "1013.3",
+        "tempf": "76.1",
+        "dewPoint": "65.17",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1622035500000",
+        "baromrelin": "1013.2",
+        "tempf": "76.5",
+        "dewPoint": "65.97",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622035200000",
+        "baromrelin": "1013.1",
+        "tempf": "75.6",
+        "dewPoint": "65.52",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1622034900000",
+        "baromrelin": "1013.2",
+        "tempf": "73.9",
+        "dewPoint": "65.08",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1622034600000",
+        "baromrelin": "1013.4",
+        "tempf": "73.4",
+        "dewPoint": "65.74",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622034300000",
+        "baromrelin": "1013.1",
+        "tempf": "72.71",
+        "dewPoint": "65.37",
+        "windspeedmph": "10.31"
+    },
+    {
+        "dateutc": "1622034000000",
+        "baromrelin": "1013.3",
+        "tempf": "72.23",
+        "dewPoint": "65.35",
+        "windspeedmph": "10.13"
+    },
+    {
+        "dateutc": "1622033700000",
+        "baromrelin": "1013.3",
+        "tempf": "70.7",
+        "dewPoint": "64.22",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622033400000",
+        "baromrelin": "1013.4",
+        "tempf": "70.7",
+        "dewPoint": "64.22",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622033100000",
+        "baromrelin": "1013.5",
+        "tempf": "70.7",
+        "dewPoint": "64.22",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622032800000",
+        "baromrelin": "1013.5",
+        "tempf": "70.7",
+        "dewPoint": "65.62",
+        "windspeedmph": "8.3"
+    },
+    {
+        "dateutc": "1622032500000",
+        "baromrelin": "1013.3",
+        "tempf": "70.7",
+        "dewPoint": "65.62",
+        "windspeedmph": "8.3"
+    },
+    {
+        "dateutc": "1622032200000",
+        "baromrelin": "1013.7",
+        "tempf": "68.9",
+        "dewPoint": "64.2",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622031900000",
+        "baromrelin": "1013.6",
+        "tempf": "68.9",
+        "dewPoint": "64.2",
+        "windspeedmph": "8.1"
+    },
+    {
+        "dateutc": "1622031600000",
+        "baromrelin": "1013.5",
+        "tempf": "68.7",
+        "dewPoint": "65",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622031300000",
+        "baromrelin": "1013.6",
+        "tempf": "69.87",
+        "dewPoint": "63.71",
+        "windspeedmph": "9.98"
+    },
+    {
+        "dateutc": "1622031000000",
+        "baromrelin": "1013.6",
+        "tempf": "69.61",
+        "dewPoint": "63.55",
+        "windspeedmph": "9.96"
+    },
+    {
+        "dateutc": "1622030700000",
+        "baromrelin": "1013.6",
+        "tempf": "66.2",
+        "dewPoint": "63.8",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622030400000",
+        "baromrelin": "1013.9",
+        "tempf": "66.2",
+        "dewPoint": "63.8",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622030100000",
+        "baromrelin": "1013.7",
+        "tempf": "66.2",
+        "dewPoint": "63.8",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1622029800000",
+        "baromrelin": "1013.8",
+        "tempf": "65.8",
+        "dewPoint": "63.72",
+        "windspeedmph": "7.2"
+    },
+    {
+        "dateutc": "1622029500000",
+        "baromrelin": "1013.8",
+        "tempf": "65.8",
+        "dewPoint": "63.72",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622029200000",
+        "baromrelin": "1013.8",
+        "tempf": "66",
+        "dewPoint": "63.61",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622028900000",
+        "baromrelin": "1013.7",
+        "tempf": "65.8",
+        "dewPoint": "63.72",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1622028600000",
+        "baromrelin": "1013.7",
+        "tempf": "64.9",
+        "dewPoint": "63.13",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622028300000",
+        "baromrelin": "1013.8",
+        "tempf": "64.9",
+        "dewPoint": "63.13",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622028000000",
+        "baromrelin": "1013.9",
+        "tempf": "64.9",
+        "dewPoint": "63.13",
+        "windspeedmph": "8.9"
+    },
+    {
+        "dateutc": "1622027700000",
+        "baromrelin": "1014.1",
+        "tempf": "64.2",
+        "dewPoint": "62.74",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1622027400000",
+        "baromrelin": "1013.9",
+        "tempf": "64",
+        "dewPoint": "62.83",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622027100000",
+        "baromrelin": "1013.7",
+        "tempf": "64",
+        "dewPoint": "62.83",
+        "windspeedmph": "7.8"
+    },
+    {
+        "dateutc": "1622026800000",
+        "baromrelin": "1013.8",
+        "tempf": "63.9",
+        "dewPoint": "62.74",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622026500000",
+        "baromrelin": "1013.9",
+        "tempf": "63.1",
+        "dewPoint": "61.94",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622026200000",
+        "baromrelin": "1013.8",
+        "tempf": "62.8",
+        "dewPoint": "62.23",
+        "windspeedmph": "7.6"
+    },
+    {
+        "dateutc": "1622025900000",
+        "baromrelin": "1013.7",
+        "tempf": "62.8",
+        "dewPoint": "62.51",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1622025600000",
+        "baromrelin": "1013.8",
+        "tempf": "65.13",
+        "dewPoint": "60.57",
+        "windspeedmph": "9.18"
+    },
+    {
+        "dateutc": "1622025300000",
+        "baromrelin": "1013.8",
+        "tempf": "64.98",
+        "dewPoint": "60.41",
+        "windspeedmph": "9.17"
+    },
+    {
+        "dateutc": "1622025000000",
+        "baromrelin": "1013.8",
+        "tempf": "64.81",
+        "dewPoint": "60.25",
+        "windspeedmph": "9.13"
+    },
+    {
+        "dateutc": "1622024700000",
+        "baromrelin": "1013.8",
+        "tempf": "64.65",
+        "dewPoint": "60.1",
+        "windspeedmph": "9.08"
+    },
+    {
+        "dateutc": "1622024400000",
+        "baromrelin": "1013.8",
+        "tempf": "64.51",
+        "dewPoint": "59.95",
+        "windspeedmph": "9.04"
+    },
+    {
+        "dateutc": "1622024100000",
+        "baromrelin": "1013.8",
+        "tempf": "64.37",
+        "dewPoint": "59.82",
+        "windspeedmph": "9.01"
+    },
+    {
+        "dateutc": "1622023800000",
+        "baromrelin": "1013.9",
+        "tempf": "64.2",
+        "dewPoint": "59.61",
+        "windspeedmph": "9.01"
+    },
+    {
+        "dateutc": "1622023500000",
+        "baromrelin": "1013.9",
+        "tempf": "64.1",
+        "dewPoint": "59.51",
+        "windspeedmph": "8.97"
+    },
+    {
+        "dateutc": "1622023200000",
+        "baromrelin": "1013.9",
+        "tempf": "64",
+        "dewPoint": "59.42",
+        "windspeedmph": "8.95"
+    },
+    {
+        "dateutc": "1622022900000",
+        "baromrelin": "1013.8",
+        "tempf": "62.1",
+        "dewPoint": "61.81",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622022600000",
+        "baromrelin": "1013.8",
+        "tempf": "62.1",
+        "dewPoint": "61.81",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622022300000",
+        "baromrelin": "1013.8",
+        "tempf": "62.1",
+        "dewPoint": "61.81",
+        "windspeedmph": "4"
+    },
+    {
+        "dateutc": "1622022000000",
+        "baromrelin": "1014",
+        "tempf": "63.65",
+        "dewPoint": "59.06",
+        "windspeedmph": "8.65"
+    },
+    {
+        "dateutc": "1622021700000",
+        "baromrelin": "1014",
+        "tempf": "63.63",
+        "dewPoint": "59.05",
+        "windspeedmph": "8.65"
+    },
+    {
+        "dateutc": "1622021400000",
+        "baromrelin": "1014",
+        "tempf": "63.62",
+        "dewPoint": "59.05",
+        "windspeedmph": "8.65"
+    },
+    {
+        "dateutc": "1622021100000",
+        "baromrelin": "1014.1",
+        "tempf": "63.62",
+        "dewPoint": "59.05",
+        "windspeedmph": "8.65"
+    },
+    {
+        "dateutc": "1622020800000",
+        "baromrelin": "1014.1",
+        "tempf": "63.63",
+        "dewPoint": "59.06",
+        "windspeedmph": "8.66"
+    },
+    {
+        "dateutc": "1622020500000",
+        "baromrelin": "1013.9",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1622020200000",
+        "baromrelin": "1014",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1622019900000",
+        "baromrelin": "1014.1",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1622019600000",
+        "baromrelin": "1014",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622019300000",
+        "baromrelin": "1014",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622019000000",
+        "baromrelin": "1014",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1622018700000",
+        "baromrelin": "1014.3",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622018400000",
+        "baromrelin": "1014.3",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622018100000",
+        "baromrelin": "1014.3",
+        "tempf": "63.1",
+        "dewPoint": "62.23",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1622017800000",
+        "baromrelin": "1014.1",
+        "tempf": "63.87",
+        "dewPoint": "59.34",
+        "windspeedmph": "8.61"
+    },
+    {
+        "dateutc": "1622017500000",
+        "baromrelin": "1014.2",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622017200000",
+        "baromrelin": "1014.1",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1622016900000",
+        "baromrelin": "1014.3",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622016600000",
+        "baromrelin": "1014.4",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1622016300000",
+        "baromrelin": "1014.2",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1622016000000",
+        "baromrelin": "1014.4",
+        "tempf": "63.3",
+        "dewPoint": "62.72",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1622015700000",
+        "baromrelin": "1014.5",
+        "tempf": "64.32",
+        "dewPoint": "59.97",
+        "windspeedmph": "8.43"
+    },
+    {
+        "dateutc": "1622015400000",
+        "baromrelin": "1014.5",
+        "tempf": "64.4",
+        "dewPoint": "60",
+        "windspeedmph": "8.45"
+    },
+    {
+        "dateutc": "1622015100000",
+        "baromrelin": "1014.6",
+        "tempf": "64.48",
+        "dewPoint": "60.06",
+        "windspeedmph": "8.46"
+    },
+    {
+        "dateutc": "1622014800000",
+        "baromrelin": "1014.7",
+        "tempf": "64.56",
+        "dewPoint": "60.14",
+        "windspeedmph": "8.47"
+    },
+    {
+        "dateutc": "1622014500000",
+        "baromrelin": "1014.7",
+        "tempf": "64.67",
+        "dewPoint": "60.21",
+        "windspeedmph": "8.53"
+    },
+    {
+        "dateutc": "1622014200000",
+        "baromrelin": "1014.8",
+        "tempf": "64.75",
+        "dewPoint": "60.28",
+        "windspeedmph": "8.54"
+    },
+    {
+        "dateutc": "1622013900000",
+        "baromrelin": "1014.9",
+        "tempf": "64.84",
+        "dewPoint": "60.36",
+        "windspeedmph": "8.56"
+    },
+    {
+        "dateutc": "1622013600000",
+        "baromrelin": "1014.9",
+        "tempf": "64.93",
+        "dewPoint": "60.43",
+        "windspeedmph": "8.57"
+    },
+    {
+        "dateutc": "1622013300000",
+        "baromrelin": "1015",
+        "tempf": "65.02",
+        "dewPoint": "60.51",
+        "windspeedmph": "8.58"
+    },
+    {
+        "dateutc": "1622013000000",
+        "baromrelin": "1015.1",
+        "tempf": "65.11",
+        "dewPoint": "60.58",
+        "windspeedmph": "8.6"
+    },
+    {
+        "dateutc": "1622012700000",
+        "baromrelin": "1015.1",
+        "tempf": "65.2",
+        "dewPoint": "60.65",
+        "windspeedmph": "8.61"
+    },
+    {
+        "dateutc": "1622012400000",
+        "baromrelin": "1015.1",
+        "tempf": "65.3",
+        "dewPoint": "60.72",
+        "windspeedmph": "8.62"
+    },
+    {
+        "dateutc": "1622012100000",
+        "baromrelin": "1015.2",
+        "tempf": "65.39",
+        "dewPoint": "60.78",
+        "windspeedmph": "8.63"
+    },
+    {
+        "dateutc": "1622011800000",
+        "baromrelin": "1015.1",
+        "tempf": "65.14",
+        "dewPoint": "60.92",
+        "windspeedmph": "8.59"
+    },
+    {
+        "dateutc": "1622011500000",
+        "baromrelin": "1015.2",
+        "tempf": "65.23",
+        "dewPoint": "61",
+        "windspeedmph": "8.6"
+    },
+    {
+        "dateutc": "1622011200000",
+        "baromrelin": "1015.2",
+        "tempf": "65.32",
+        "dewPoint": "61.07",
+        "windspeedmph": "8.61"
+    },
+    {
+        "dateutc": "1622010900000",
+        "baromrelin": "1015.2",
+        "tempf": "65.41",
+        "dewPoint": "61.15",
+        "windspeedmph": "8.61"
+    },
+    {
+        "dateutc": "1622010600000",
+        "baromrelin": "1015.2",
+        "tempf": "65.5",
+        "dewPoint": "61.22",
+        "windspeedmph": "8.62"
+    },
+    {
+        "dateutc": "1622010300000",
+        "baromrelin": "1015.2",
+        "tempf": "65.6",
+        "dewPoint": "61.29",
+        "windspeedmph": "8.63"
+    },
+    {
+        "dateutc": "1622010000000",
+        "baromrelin": "1015.2",
+        "tempf": "65.69",
+        "dewPoint": "61.36",
+        "windspeedmph": "8.64"
+    },
+    {
+        "dateutc": "1622009700000",
+        "baromrelin": "1015.2",
+        "tempf": "65.78",
+        "dewPoint": "61.43",
+        "windspeedmph": "8.66"
+    },
+    {
+        "dateutc": "1622009400000",
+        "baromrelin": "1015.3",
+        "tempf": "65.87",
+        "dewPoint": "61.49",
+        "windspeedmph": "8.67"
+    },
+    {
+        "dateutc": "1622009100000",
+        "baromrelin": "1015.3",
+        "tempf": "65.95",
+        "dewPoint": "61.55",
+        "windspeedmph": "8.68"
+    },
+    {
+        "dateutc": "1622008800000",
+        "baromrelin": "1015.3",
+        "tempf": "65.96",
+        "dewPoint": "61.5",
+        "windspeedmph": "8.77"
+    },
+    {
+        "dateutc": "1622008500000",
+        "baromrelin": "1015.3",
+        "tempf": "66.03",
+        "dewPoint": "61.55",
+        "windspeedmph": "8.78"
+    },
+    {
+        "dateutc": "1622008200000",
+        "baromrelin": "1015.3",
+        "tempf": "66.1",
+        "dewPoint": "61.6",
+        "windspeedmph": "8.8"
+    },
+    {
+        "dateutc": "1622007900000",
+        "baromrelin": "1015.3",
+        "tempf": "66.16",
+        "dewPoint": "61.63",
+        "windspeedmph": "8.81"
+    },
+    {
+        "dateutc": "1622007600000",
+        "baromrelin": "1015.3",
+        "tempf": "66.21",
+        "dewPoint": "61.67",
+        "windspeedmph": "8.82"
+    },
+    {
+        "dateutc": "1622007300000",
+        "baromrelin": "1015.2",
+        "tempf": "66.22",
+        "dewPoint": "61.7",
+        "windspeedmph": "8.81"
+    },
+    {
+        "dateutc": "1622007000000",
+        "baromrelin": "1015.2",
+        "tempf": "66.27",
+        "dewPoint": "61.73",
+        "windspeedmph": "8.81"
+    },
+    {
+        "dateutc": "1622006700000",
+        "baromrelin": "1015.2",
+        "tempf": "66.32",
+        "dewPoint": "61.75",
+        "windspeedmph": "8.82"
+    },
+    {
+        "dateutc": "1622006400000",
+        "baromrelin": "1015.5",
+        "tempf": "66.34",
+        "dewPoint": "61.76",
+        "windspeedmph": "8.75"
+    },
+    {
+        "dateutc": "1622006100000",
+        "baromrelin": "1015.5",
+        "tempf": "66.39",
+        "dewPoint": "61.78",
+        "windspeedmph": "8.78"
+    },
+    {
+        "dateutc": "1622005800000",
+        "baromrelin": "1015.5",
+        "tempf": "66.45",
+        "dewPoint": "61.81",
+        "windspeedmph": "8.8"
+    },
+    {
+        "dateutc": "1622005500000",
+        "baromrelin": "1015.5",
+        "tempf": "66.5",
+        "dewPoint": "61.85",
+        "windspeedmph": "8.82"
+    },
+    {
+        "dateutc": "1622005200000",
+        "baromrelin": "1015.5",
+        "tempf": "66.56",
+        "dewPoint": "61.89",
+        "windspeedmph": "8.83"
+    },
+    {
+        "dateutc": "1622004900000",
+        "baromrelin": "1015.5",
+        "tempf": "66.62",
+        "dewPoint": "61.93",
+        "windspeedmph": "8.83"
+    },
+    {
+        "dateutc": "1622004600000",
+        "baromrelin": "1015.4",
+        "tempf": "66.69",
+        "dewPoint": "61.97",
+        "windspeedmph": "8.82"
+    },
+    {
+        "dateutc": "1622004300000",
+        "baromrelin": "1015.4",
+        "tempf": "66.75",
+        "dewPoint": "62.02",
+        "windspeedmph": "8.8"
+    },
+    {
+        "dateutc": "1622004000000",
+        "baromrelin": "1015.3",
+        "tempf": "66.81",
+        "dewPoint": "62.07",
+        "windspeedmph": "8.78"
+    },
+    {
+        "dateutc": "1622003700000",
+        "baromrelin": "1015.3",
+        "tempf": "66.88",
+        "dewPoint": "62.12",
+        "windspeedmph": "8.75"
+    },
+    {
+        "dateutc": "1622003400000",
+        "baromrelin": "1015.2",
+        "tempf": "66.96",
+        "dewPoint": "62.18",
+        "windspeedmph": "8.75"
+    },
+    {
+        "dateutc": "1622003100000",
+        "baromrelin": "1015.1",
+        "tempf": "67.02",
+        "dewPoint": "62.23",
+        "windspeedmph": "8.72"
+    },
+    {
+        "dateutc": "1622002800000",
+        "baromrelin": "1015.2",
+        "tempf": "66.87",
+        "dewPoint": "62.01",
+        "windspeedmph": "8.71"
+    },
+    {
+        "dateutc": "1622002500000",
+        "baromrelin": "1015.1",
+        "tempf": "66.95",
+        "dewPoint": "62.08",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622002200000",
+        "baromrelin": "1015.1",
+        "tempf": "66.96",
+        "dewPoint": "62.09",
+        "windspeedmph": "8.72"
+    },
+    {
+        "dateutc": "1622001900000",
+        "baromrelin": "1015.2",
+        "tempf": "67.07",
+        "dewPoint": "62.18",
+        "windspeedmph": "8.7"
+    },
+    {
+        "dateutc": "1622001540000",
+        "baromrelin": "1015.1",
+        "tempf": "66.6",
+        "dewPoint": "62.05",
+        "windspeedmph": "8.98"
+    },
+    {
+        "dateutc": "1622001300000",
+        "baromrelin": "1015.2",
+        "tempf": "66.69",
+        "dewPoint": "62.13",
+        "windspeedmph": "8.97"
+    },
+    {
+        "dateutc": "1622001000000",
+        "baromrelin": "1015.2",
+        "tempf": "66.78",
+        "dewPoint": "62.24",
+        "windspeedmph": "9.06"
+    },
+    {
+        "dateutc": "1622000700000",
+        "baromrelin": "1015.2",
+        "tempf": "66.84",
+        "dewPoint": "62.32",
+        "windspeedmph": "9.1"
+    },
+    {
+        "dateutc": "1622000400000",
+        "baromrelin": "1015.3",
+        "tempf": "66.9",
+        "dewPoint": "62.4",
+        "windspeedmph": "9.13"
+    },
+    {
+        "dateutc": "1622000100000",
+        "baromrelin": "1015.3",
+        "tempf": "66.96",
+        "dewPoint": "62.49",
+        "windspeedmph": "9.16"
+    },
+    {
+        "dateutc": "1621999800000",
+        "baromrelin": "1015.3",
+        "tempf": "66.99",
+        "dewPoint": "62.57",
+        "windspeedmph": "9.19"
+    },
+    {
+        "dateutc": "1621999500000",
+        "baromrelin": "1015.4",
+        "tempf": "67.05",
+        "dewPoint": "62.65",
+        "windspeedmph": "9.22"
+    },
+    {
+        "dateutc": "1621999200000",
+        "baromrelin": "1015.4",
+        "tempf": "67.12",
+        "dewPoint": "62.74",
+        "windspeedmph": "9.24"
+    },
+    {
+        "dateutc": "1621998900000",
+        "baromrelin": "1015.5",
+        "tempf": "67.18",
+        "dewPoint": "62.82",
+        "windspeedmph": "9.26"
+    },
+    {
+        "dateutc": "1621998600000",
+        "baromrelin": "1015.5",
+        "tempf": "67.25",
+        "dewPoint": "62.89",
+        "windspeedmph": "9.28"
+    },
+    {
+        "dateutc": "1621998300000",
+        "baromrelin": "1015.5",
+        "tempf": "67.33",
+        "dewPoint": "62.97",
+        "windspeedmph": "9.29"
+    },
+    {
+        "dateutc": "1621998000000",
+        "baromrelin": "1015.5",
+        "tempf": "67.41",
+        "dewPoint": "63.04",
+        "windspeedmph": "9.28"
+    },
+    {
+        "dateutc": "1621997700000",
+        "baromrelin": "1015.5",
+        "tempf": "67.5",
+        "dewPoint": "63.11",
+        "windspeedmph": "9.27"
+    },
+    {
+        "dateutc": "1621997400000",
+        "baromrelin": "1015.8",
+        "tempf": "67.56",
+        "dewPoint": "63.25",
+        "windspeedmph": "9.03"
+    },
+    {
+        "dateutc": "1621997100000",
+        "baromrelin": "1015.8",
+        "tempf": "67.66",
+        "dewPoint": "63.3",
+        "windspeedmph": "8.99"
+    },
+    {
+        "dateutc": "1621996800000",
+        "baromrelin": "1015.8",
+        "tempf": "67.76",
+        "dewPoint": "63.36",
+        "windspeedmph": "8.94"
+    },
+    {
+        "dateutc": "1621996500000",
+        "baromrelin": "1015.8",
+        "tempf": "67.89",
+        "dewPoint": "63.41",
+        "windspeedmph": "8.89"
+    },
+    {
+        "dateutc": "1621996200000",
+        "baromrelin": "1015.7",
+        "tempf": "68",
+        "dewPoint": "63.46",
+        "windspeedmph": "8.84"
+    },
+    {
+        "dateutc": "1621995900000",
+        "baromrelin": "1015.7",
+        "tempf": "68.1",
+        "dewPoint": "63.52",
+        "windspeedmph": "8.78"
+    },
+    {
+        "dateutc": "1621995600000",
+        "baromrelin": "1015.7",
+        "tempf": "68.21",
+        "dewPoint": "63.57",
+        "windspeedmph": "8.73"
+    },
+    {
+        "dateutc": "1621995300000",
+        "baromrelin": "1015.7",
+        "tempf": "68.32",
+        "dewPoint": "63.64",
+        "windspeedmph": "8.68"
+    },
+    {
+        "dateutc": "1621995000000",
+        "baromrelin": "1015.4",
+        "tempf": "68.43",
+        "dewPoint": "63.67",
+        "windspeedmph": "8.67"
+    },
+    {
+        "dateutc": "1621994700000",
+        "baromrelin": "1015.4",
+        "tempf": "68.55",
+        "dewPoint": "63.73",
+        "windspeedmph": "8.64"
+    },
+    {
+        "dateutc": "1621994400000",
+        "baromrelin": "1015.4",
+        "tempf": "68.67",
+        "dewPoint": "63.79",
+        "windspeedmph": "8.62"
+    },
+    {
+        "dateutc": "1621994100000",
+        "baromrelin": "1015.3",
+        "tempf": "68.79",
+        "dewPoint": "63.86",
+        "windspeedmph": "8.58"
+    },
+    {
+        "dateutc": "1621993800000",
+        "baromrelin": "1015.3",
+        "tempf": "68.91",
+        "dewPoint": "63.94",
+        "windspeedmph": "8.55"
+    },
+    {
+        "dateutc": "1621993500000",
+        "baromrelin": "1015.3",
+        "tempf": "69.03",
+        "dewPoint": "64.01",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1621993200000",
+        "baromrelin": "1015.3",
+        "tempf": "69.16",
+        "dewPoint": "64.09",
+        "windspeedmph": "8.46"
+    },
+    {
+        "dateutc": "1621992900000",
+        "baromrelin": "1015.3",
+        "tempf": "69.28",
+        "dewPoint": "64.16",
+        "windspeedmph": "8.41"
+    },
+    {
+        "dateutc": "1621992600000",
+        "baromrelin": "1015.3",
+        "tempf": "69.46",
+        "dewPoint": "64.24",
+        "windspeedmph": "8.45"
+    },
+    {
+        "dateutc": "1621992300000",
+        "baromrelin": "1015.3",
+        "tempf": "69.59",
+        "dewPoint": "64.32",
+        "windspeedmph": "8.4"
+    },
+    {
+        "dateutc": "1621992000000",
+        "baromrelin": "1015.5",
+        "tempf": "69.63",
+        "dewPoint": "64.25",
+        "windspeedmph": "8.49"
+    },
+    {
+        "dateutc": "1621991700000",
+        "baromrelin": "1015.5",
+        "tempf": "69.77",
+        "dewPoint": "64.35",
+        "windspeedmph": "8.46"
+    },
+    {
+        "dateutc": "1621991400000",
+        "baromrelin": "1015.5",
+        "tempf": "69.92",
+        "dewPoint": "64.46",
+        "windspeedmph": "8.44"
+    },
+    {
+        "dateutc": "1621991100000",
+        "baromrelin": "1015.5",
+        "tempf": "70.07",
+        "dewPoint": "64.56",
+        "windspeedmph": "8.42"
+    },
+    {
+        "dateutc": "1621990800000",
+        "baromrelin": "1015.5",
+        "tempf": "70.19",
+        "dewPoint": "64.56",
+        "windspeedmph": "8.58"
+    },
+    {
+        "dateutc": "1621990500000",
+        "baromrelin": "1015.4",
+        "tempf": "70.37",
+        "dewPoint": "64.69",
+        "windspeedmph": "8.57"
+    },
+    {
+        "dateutc": "1621990200000",
+        "baromrelin": "1015.4",
+        "tempf": "70.47",
+        "dewPoint": "64.8",
+        "windspeedmph": "8.55"
+    },
+    {
+        "dateutc": "1621989900000",
+        "baromrelin": "1015.4",
+        "tempf": "70.65",
+        "dewPoint": "64.94",
+        "windspeedmph": "8.55"
+    },
+    {
+        "dateutc": "1621989600000",
+        "baromrelin": "1015.4",
+        "tempf": "70.84",
+        "dewPoint": "65.08",
+        "windspeedmph": "8.55"
+    },
+    {
+        "dateutc": "1621989300000",
+        "baromrelin": "1015.4",
+        "tempf": "71.07",
+        "dewPoint": "65.22",
+        "windspeedmph": "8.45"
+    },
+    {
+        "dateutc": "1621989000000",
+        "baromrelin": "1015.4",
+        "tempf": "71.26",
+        "dewPoint": "65.36",
+        "windspeedmph": "8.46"
+    },
+    {
+        "dateutc": "1621988700000",
+        "baromrelin": "1015.4",
+        "tempf": "70.3",
+        "dewPoint": "66.9",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621988400000",
+        "baromrelin": "1015.5",
+        "tempf": "70.3",
+        "dewPoint": "66.9",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621988100000",
+        "baromrelin": "1015.2",
+        "tempf": "70.3",
+        "dewPoint": "66.9",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621987800000",
+        "baromrelin": "1015.4",
+        "tempf": "70.3",
+        "dewPoint": "66.57",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1621987500000",
+        "baromrelin": "1015.1",
+        "tempf": "70.3",
+        "dewPoint": "66.57",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1621987200000",
+        "baromrelin": "1015.4",
+        "tempf": "72.48",
+        "dewPoint": "66.13",
+        "windspeedmph": "8.63"
+    },
+    {
+        "dateutc": "1621986900000",
+        "baromrelin": "1015.3",
+        "tempf": "72.68",
+        "dewPoint": "66.22",
+        "windspeedmph": "8.69"
+    },
+    {
+        "dateutc": "1621986600000",
+        "baromrelin": "1015.3",
+        "tempf": "72.89",
+        "dewPoint": "66.31",
+        "windspeedmph": "8.77"
+    },
+    {
+        "dateutc": "1621986300000",
+        "baromrelin": "1015.3",
+        "tempf": "73.1",
+        "dewPoint": "66.38",
+        "windspeedmph": "8.86"
+    },
+    {
+        "dateutc": "1621986000000",
+        "baromrelin": "1015.3",
+        "tempf": "73.62",
+        "dewPoint": "66.31",
+        "windspeedmph": "8.74"
+    },
+    {
+        "dateutc": "1621985700000",
+        "baromrelin": "1015.2",
+        "tempf": "73.81",
+        "dewPoint": "66.36",
+        "windspeedmph": "8.85"
+    },
+    {
+        "dateutc": "1621985400000",
+        "baromrelin": "1015.2",
+        "tempf": "74.08",
+        "dewPoint": "66.39",
+        "windspeedmph": "8.98"
+    },
+    {
+        "dateutc": "1621985100000",
+        "baromrelin": "1015.1",
+        "tempf": "74.28",
+        "dewPoint": "66.43",
+        "windspeedmph": "9.1"
+    },
+    {
+        "dateutc": "1621984800000",
+        "baromrelin": "1015.2",
+        "tempf": "73.29",
+        "dewPoint": "67.04",
+        "windspeedmph": "9.88"
+    },
+    {
+        "dateutc": "1621984500000",
+        "baromrelin": "1014.7",
+        "tempf": "77",
+        "dewPoint": "65.61",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1621984200000",
+        "baromrelin": "1015",
+        "tempf": "77",
+        "dewPoint": "65.61",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1621983900000",
+        "baromrelin": "1014.7",
+        "tempf": "77.7",
+        "dewPoint": "66.28",
+        "windspeedmph": "2.5"
+    },
+    {
+        "dateutc": "1621983600000",
+        "baromrelin": "1014.6",
+        "tempf": "77.7",
+        "dewPoint": "65.85",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1621983300000",
+        "baromrelin": "1014.8",
+        "tempf": "77.7",
+        "dewPoint": "65.85",
+        "windspeedmph": "1.8"
+    },
+    {
+        "dateutc": "1621983000000",
+        "baromrelin": "1015",
+        "tempf": "77.7",
+        "dewPoint": "65.42",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1621982700000",
+        "baromrelin": "1015",
+        "tempf": "77.7",
+        "dewPoint": "65.42",
+        "windspeedmph": "1.1"
+    },
+    {
+        "dateutc": "1621982400000",
+        "baromrelin": "1014.8",
+        "tempf": "77.9",
+        "dewPoint": "65.61",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621982100000",
+        "baromrelin": "1015",
+        "tempf": "77.9",
+        "dewPoint": "65.61",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621981800000",
+        "baromrelin": "1015",
+        "tempf": "76.05",
+        "dewPoint": "67.2",
+        "windspeedmph": "10.03"
+    },
+    {
+        "dateutc": "1621981500000",
+        "baromrelin": "1014.9",
+        "tempf": "78.6",
+        "dewPoint": "65.38",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621981200000",
+        "baromrelin": "1015",
+        "tempf": "78.6",
+        "dewPoint": "65.38",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621980900000",
+        "baromrelin": "1015.1",
+        "tempf": "78.6",
+        "dewPoint": "65.38",
+        "windspeedmph": "0.7"
+    },
+    {
+        "dateutc": "1621980600000",
+        "baromrelin": "1015.3",
+        "tempf": "79.5",
+        "dewPoint": "66.23",
+        "windspeedmph": "3.4"
+    },
+    {
+        "dateutc": "1621980300000",
+        "baromrelin": "1015.3",
+        "tempf": "79.5",
+        "dewPoint": "65.32",
+        "windspeedmph": "0.9"
+    },
+    {
+        "dateutc": "1621980000000",
+        "baromrelin": "1015.4",
+        "tempf": "79.9",
+        "dewPoint": "65.69",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1621979700000",
+        "baromrelin": "1015.5",
+        "tempf": "79.9",
+        "dewPoint": "65.23",
+        "windspeedmph": "3.8"
+    },
+    {
+        "dateutc": "1621979400000",
+        "baromrelin": "1015.3",
+        "tempf": "79.9",
+        "dewPoint": "65.69",
+        "windspeedmph": "3.1"
+    },
+    {
+        "dateutc": "1621979100000",
+        "baromrelin": "1015.5",
+        "tempf": "79.9",
+        "dewPoint": "65.69",
+        "windspeedmph": "2"
+    },
+    {
+        "dateutc": "1621978800000",
+        "baromrelin": "1015",
+        "tempf": "77.04",
+        "dewPoint": "67.13",
+        "windspeedmph": "10.81"
+    },
+    {
+        "dateutc": "1621978500000",
+        "baromrelin": "1015",
+        "tempf": "77.57",
+        "dewPoint": "67.58",
+        "windspeedmph": "10.82"
+    },
+    {
+        "dateutc": "1621978200000",
+        "baromrelin": "1015",
+        "tempf": "77.24",
+        "dewPoint": "67.19",
+        "windspeedmph": "10.83"
+    },
+    {
+        "dateutc": "1621977900000",
+        "baromrelin": "1015.1",
+        "tempf": "77.72",
+        "dewPoint": "67.61",
+        "windspeedmph": "10.84"
+    },
+    {
+        "dateutc": "1621977600000",
+        "baromrelin": "1015.1",
+        "tempf": "77.78",
+        "dewPoint": "67.63",
+        "windspeedmph": "10.84"
+    },
+    {
+        "dateutc": "1621977300000",
+        "baromrelin": "1015.1",
+        "tempf": "77.84",
+        "dewPoint": "67.64",
+        "windspeedmph": "10.84"
+    },
+    {
+        "dateutc": "1621977000000",
+        "baromrelin": "1015.2",
+        "tempf": "77.79",
+        "dewPoint": "67.59",
+        "windspeedmph": "10.84"
+    },
+    {
+        "dateutc": "1621976700000",
+        "baromrelin": "1015.2",
+        "tempf": "77.82",
+        "dewPoint": "67.59",
+        "windspeedmph": "10.86"
+    },
+    {
+        "dateutc": "1621976400000",
+        "baromrelin": "1015.2",
+        "tempf": "77.84",
+        "dewPoint": "67.59",
+        "windspeedmph": "10.87"
+    },
+    {
+        "dateutc": "1621976100000",
+        "baromrelin": "1015.2",
+        "tempf": "77.85",
+        "dewPoint": "67.59",
+        "windspeedmph": "10.89"
+    },
+    {
+        "dateutc": "1621975800000",
+        "baromrelin": "1015.3",
+        "tempf": "77.85",
+        "dewPoint": "67.58",
+        "windspeedmph": "10.9"
+    },
+    {
+        "dateutc": "1621975500000",
+        "baromrelin": "1015.3",
+        "tempf": "77.84",
+        "dewPoint": "67.58",
+        "windspeedmph": "10.91"
+    },
+    {
+        "dateutc": "1621975200000",
+        "baromrelin": "1015.3",
+        "tempf": "77.83",
+        "dewPoint": "67.55",
+        "windspeedmph": "10.89"
+    },
+    {
+        "dateutc": "1621974900000",
+        "baromrelin": "1015.3",
+        "tempf": "77.8",
+        "dewPoint": "67.55",
+        "windspeedmph": "10.88"
+    },
+    {
+        "dateutc": "1621974600000",
+        "baromrelin": "1015.8",
+        "tempf": "81.7",
+        "dewPoint": "66.44",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621974300000",
+        "baromrelin": "1015.8",
+        "tempf": "81.7",
+        "dewPoint": "66.44",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621974000000",
+        "baromrelin": "1016",
+        "tempf": "81.7",
+        "dewPoint": "66.44",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621973700000",
+        "baromrelin": "1015.3",
+        "tempf": "77.55",
+        "dewPoint": "67.5",
+        "windspeedmph": "10.83"
+    },
+    {
+        "dateutc": "1621973100000",
+        "baromrelin": "1016",
+        "tempf": "81.5",
+        "dewPoint": "65.27",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1621972800000",
+        "baromrelin": "1016.1",
+        "tempf": "81.5",
+        "dewPoint": "65.27",
+        "windspeedmph": "2.9"
+    },
+    {
+        "dateutc": "1621972500000",
+        "baromrelin": "1015.6",
+        "tempf": "77.06",
+        "dewPoint": "67.55",
+        "windspeedmph": "10.65"
+    },
+    {
+        "dateutc": "1621972200000",
+        "baromrelin": "1015.8",
+        "tempf": "77.17",
+        "dewPoint": "67.16",
+        "windspeedmph": "10.37"
+    },
+    {
+        "dateutc": "1621971900000",
+        "baromrelin": "1015.9",
+        "tempf": "77.04",
+        "dewPoint": "67.19",
+        "windspeedmph": "10.36"
+    },
+    {
+        "dateutc": "1621971600000",
+        "baromrelin": "1015.9",
+        "tempf": "76.89",
+        "dewPoint": "67.23",
+        "windspeedmph": "10.35"
+    },
+    {
+        "dateutc": "1621971300000",
+        "baromrelin": "1015.9",
+        "tempf": "76.73",
+        "dewPoint": "67.26",
+        "windspeedmph": "10.34"
+    },
+    {
+        "dateutc": "1621971000000",
+        "baromrelin": "1016.1",
+        "tempf": "76.57",
+        "dewPoint": "67.11",
+        "windspeedmph": "10.3"
+    },
+    {
+        "dateutc": "1621970700000",
+        "baromrelin": "1016.2",
+        "tempf": "76.42",
+        "dewPoint": "67.1",
+        "windspeedmph": "10.27"
+    },
+    {
+        "dateutc": "1621970400000",
+        "baromrelin": "1016.2",
+        "tempf": "76.27",
+        "dewPoint": "67.1",
+        "windspeedmph": "10.25"
+    },
+    {
+        "dateutc": "1621970100000",
+        "baromrelin": "1016.3",
+        "tempf": "76.11",
+        "dewPoint": "67.08",
+        "windspeedmph": "10.22"
+    },
+    {
+        "dateutc": "1621969800000",
+        "baromrelin": "1016.6",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1621969500000",
+        "baromrelin": "1016.6",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1621969200000",
+        "baromrelin": "1016.8",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "6.5"
+    },
+    {
+        "dateutc": "1621968900000",
+        "baromrelin": "1016.8",
+        "tempf": "81.5",
+        "dewPoint": "65.27",
+        "windspeedmph": "5.1"
+    },
+    {
+        "dateutc": "1621968600000",
+        "baromrelin": "1016.9",
+        "tempf": "81.7",
+        "dewPoint": "65.46",
+        "windspeedmph": "3.6"
+    },
+    {
+        "dateutc": "1621968300000",
+        "baromrelin": "1016.8",
+        "tempf": "82",
+        "dewPoint": "66.23",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1621968000000",
+        "baromrelin": "1016.8",
+        "tempf": "80.1",
+        "dewPoint": "64.46",
+        "windspeedmph": "5.8"
+    },
+    {
+        "dateutc": "1621967700000",
+        "baromrelin": "1017.1",
+        "tempf": "80.1",
+        "dewPoint": "64.94",
+        "windspeedmph": "4.9"
+    },
+    {
+        "dateutc": "1621967400000",
+        "baromrelin": "1016.8",
+        "tempf": "74.33",
+        "dewPoint": "66.71",
+        "windspeedmph": "10.18"
+    },
+    {
+        "dateutc": "1621967100000",
+        "baromrelin": "1016.9",
+        "tempf": "74.16",
+        "dewPoint": "66.65",
+        "windspeedmph": "10.17"
+    },
+    {
+        "dateutc": "1621966800000",
+        "baromrelin": "1016.9",
+        "tempf": "73.98",
+        "dewPoint": "66.58",
+        "windspeedmph": "10.16"
+    },
+    {
+        "dateutc": "1621966500000",
+        "baromrelin": "1017",
+        "tempf": "73.81",
+        "dewPoint": "66.52",
+        "windspeedmph": "10.15"
+    },
+    {
+        "dateutc": "1621966200000",
+        "baromrelin": "1017.2",
+        "tempf": "79.3",
+        "dewPoint": "65.13",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1621965900000",
+        "baromrelin": "1017.2",
+        "tempf": "79.3",
+        "dewPoint": "65.13",
+        "windspeedmph": "4.7"
+    },
+    {
+        "dateutc": "1621965600000",
+        "baromrelin": "1017.3",
+        "tempf": "79.3",
+        "dewPoint": "65.13",
+        "windspeedmph": "4.5"
+    },
+    {
+        "dateutc": "1621965300000",
+        "baromrelin": "1017.3",
+        "tempf": "79.3",
+        "dewPoint": "66.49",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621965000000",
+        "baromrelin": "1017.1",
+        "tempf": "79.3",
+        "dewPoint": "66.49",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621964700000",
+        "baromrelin": "1017.3",
+        "tempf": "79.3",
+        "dewPoint": "66.49",
+        "windspeedmph": "2.2"
+    },
+    {
+        "dateutc": "1621964400000",
+        "baromrelin": "1017.3",
+        "tempf": "79.2",
+        "dewPoint": "64.57",
+        "windspeedmph": "6.3"
+    },
+    {
+        "dateutc": "1621964100000",
+        "baromrelin": "1017.7",
+        "tempf": "76.3",
+        "dewPoint": "64.09",
+        "windspeedmph": "7.4"
+    },
+    {
+        "dateutc": "1621963800000",
+        "baromrelin": "1017.9",
+        "tempf": "71.83",
+        "dewPoint": "66.07",
+        "windspeedmph": "10.06"
+    },
+    {
+        "dateutc": "1621963500000",
+        "baromrelin": "1017.9",
+        "tempf": "71.61",
+        "dewPoint": "66.02",
+        "windspeedmph": "10.04"
+    },
+    {
+        "dateutc": "1621963200000",
+        "baromrelin": "1017.9",
+        "tempf": "71.39",
+        "dewPoint": "65.96",
+        "windspeedmph": "10.01"
+    },
+    {
+        "dateutc": "1621962900000",
+        "baromrelin": "1017.9",
+        "tempf": "71.16",
+        "dewPoint": "65.9",
+        "windspeedmph": "9.98"
+    },
+    {
+        "dateutc": "1621962600000",
+        "baromrelin": "1018",
+        "tempf": "70.94",
+        "dewPoint": "65.82",
+        "windspeedmph": "9.95"
+    },
+    {
+        "dateutc": "1621962300000",
+        "baromrelin": "1017.9",
+        "tempf": "75.4",
+        "dewPoint": "63.66",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1621962000000",
+        "baromrelin": "1017.8",
+        "tempf": "75.4",
+        "dewPoint": "63.66",
+        "windspeedmph": "6.9"
+    },
+    {
+        "dateutc": "1621961700000",
+        "baromrelin": "1018",
+        "tempf": "70.28",
+        "dewPoint": "65.48",
+        "windspeedmph": "9.86"
+    },
+    {
+        "dateutc": "1621961400000",
+        "baromrelin": "1018.4",
+        "tempf": "70.11",
+        "dewPoint": "65.21",
+        "windspeedmph": "9.87"
+    },
+    {
+        "dateutc": "1621961100000",
+        "baromrelin": "1018.4",
+        "tempf": "69.89",
+        "dewPoint": "65.04",
+        "windspeedmph": "9.83"
+    },
+    {
+        "dateutc": "1621960800000",
+        "baromrelin": "1018.3",
+        "tempf": "69.68",
+        "dewPoint": "64.86",
+        "windspeedmph": "9.79"
+    },
+    {
+        "dateutc": "1621960500000",
+        "baromrelin": "1018.3",
+        "tempf": "69.37",
+        "dewPoint": "64.69",
+        "windspeedmph": "9.84"
+    },
+    {
+        "dateutc": "1621960200000",
+        "baromrelin": "1018.3",
+        "tempf": "69.16",
+        "dewPoint": "64.49",
+        "windspeedmph": "9.8"
+    },
+    {
+        "dateutc": "1621959900000",
+        "baromrelin": "1018.2",
+        "tempf": "68.95",
+        "dewPoint": "64.28",
+        "windspeedmph": "9.76"
+    },
+    {
+        "dateutc": "1621959000000",
+        "baromrelin": "1018.7",
+        "tempf": "68.07",
+        "dewPoint": "63.66",
+        "windspeedmph": "9.6"
+    },
+    {
+        "dateutc": "1621958700000",
+        "baromrelin": "1018.8",
+        "tempf": "67.88",
+        "dewPoint": "63.47",
+        "windspeedmph": "9.58"
+    },
+    {
+        "dateutc": "1621958400000",
+        "baromrelin": "1018.5",
+        "tempf": "67.16",
+        "dewPoint": "62.81",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1621958100000",
+        "baromrelin": "1018.5",
+        "tempf": "66.96",
+        "dewPoint": "62.62",
+        "windspeedmph": "9.38"
+    },
+    {
+        "dateutc": "1621957800000",
+        "baromrelin": "1018.5",
+        "tempf": "66.76",
+        "dewPoint": "62.43",
+        "windspeedmph": "9.37"
+    },
+    {
+        "dateutc": "1621957500000",
+        "baromrelin": "1018.5",
+        "tempf": "66.56",
+        "dewPoint": "62.24",
+        "windspeedmph": "9.35"
+    },
+    {
+        "dateutc": "1621957200000",
+        "baromrelin": "1018.6",
+        "tempf": "66.37",
+        "dewPoint": "62.05",
+        "windspeedmph": "9.34"
+    },
+    {
+        "dateutc": "1621956900000",
+        "baromrelin": "1018.6",
+        "tempf": "66.19",
+        "dewPoint": "61.86",
+        "windspeedmph": "9.33"
+    },
+    {
+        "dateutc": "1621956600000",
+        "baromrelin": "1018.6",
+        "tempf": "65.98",
+        "dewPoint": "61.63",
+        "windspeedmph": "9.27"
+    },
+    {
+        "dateutc": "1621956300000",
+        "baromrelin": "1018.7",
+        "tempf": "65.79",
+        "dewPoint": "61.44",
+        "windspeedmph": "9.25"
+    },
+    {
+        "dateutc": "1621956000000",
+        "baromrelin": "1018.7",
+        "tempf": "65.6",
+        "dewPoint": "61.26",
+        "windspeedmph": "9.24"
+    },
+    {
+        "dateutc": "1621955700000",
+        "baromrelin": "1018.7",
+        "tempf": "65.42",
+        "dewPoint": "61.07",
+        "windspeedmph": "9.22"
+    },
+    {
+        "dateutc": "1621955400000",
+        "baromrelin": "1018.8",
+        "tempf": "65.23",
+        "dewPoint": "60.88",
+        "windspeedmph": "9.2"
+    },
+    {
+        "dateutc": "1621955100000",
+        "baromrelin": "1018.8",
+        "tempf": "65.03",
+        "dewPoint": "60.7",
+        "windspeedmph": "9.18"
+    },
+    {
+        "dateutc": "1621954800000",
+        "baromrelin": "1018.8",
+        "tempf": "64.84",
+        "dewPoint": "60.51",
+        "windspeedmph": "9.16"
+    },
+    {
+        "dateutc": "1621954500000",
+        "baromrelin": "1018.8",
+        "tempf": "64.64",
+        "dewPoint": "60.32",
+        "windspeedmph": "9.13"
+    },
+    {
+        "dateutc": "1621954200000",
+        "baromrelin": "1018.9",
+        "tempf": "64.46",
+        "dewPoint": "60.3",
+        "windspeedmph": "9.44"
+    },
+    {
+        "dateutc": "1621953900000",
+        "baromrelin": "1018.9",
+        "tempf": "64.27",
+        "dewPoint": "60.12",
+        "windspeedmph": "9.4"
+    },
+    {
+        "dateutc": "1621953600000",
+        "baromrelin": "1019",
+        "tempf": "66.7",
+        "dewPoint": "59.25",
+        "windspeedmph": "8.5"
+    },
+    {
+        "dateutc": "1621953300000",
+        "baromrelin": "1018.9",
+        "tempf": "66.7",
+        "dewPoint": "59.25",
+        "windspeedmph": "8.5"
+    }
+];

@@ -9,10 +9,7 @@ function loadVariables(){
     document.getElementById("summary").innerHTML = whatWeather;
     document.getElementById("vis").innerHTML = "Visibility " +visibility+" miles";
     document.getElementById("status").innerHTML = stationState;
-}
-
-function smoothData(array){
-    
+    document.getElementById("currentTime").innerHTML = dayjs(currentDate).format('dd hh:mm a');
 }
 
 function convertWet(){			
@@ -451,8 +448,11 @@ function drawCharts(){
         pressureMax = Math.max.apply(null, pressureArray);
     var tempMin = Math.min.apply(null, dewArray),
         tempMax = Math.max.apply(null, tempArray);
-    var windMin = Math.min.apply(null, windArray),
-        windMax = Math.max.apply(null, windArray);
+
+    var smoothWindArray = smooth(windArray);
+
+    var windMin = Math.min.apply(null, smoothWindArray),
+        windMax = Math.max.apply(null, smoothWindArray);
     var pressureChart = new Chart(pressureCtx, {
         type: 'line',
         data: {
@@ -580,7 +580,7 @@ function drawCharts(){
             labels: dataLabels,
             datasets: [{
                 label: 'Wind Speed (kts)',
-                data: windArray,
+                data: smoothWindArray,
                 backgroundColor: [
                     'rgba(100, 100, 255, 1)',
                 ],
@@ -628,6 +628,16 @@ function drawCharts(){
             }
         }
     });
+}
+
+function smooth(array){
+    var smoothFactor = 0.42;
+    var smoothResult = [array[0]];
+    for(var i=1; array.length > i; i++){
+        smoothResult[i] = smoothFactor*array[i] + (1-smoothFactor)*smoothResult[i-1];  //	α * x\t + (1 - α) * s\t-1
+    }
+    return smoothResult;
+
 }
 
 function draw_weather(obj, state) {

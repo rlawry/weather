@@ -1,0 +1,108 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<title>Smoothing</title>
+<script type = "text/javascript" src = "./data/data2.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.5/dayjs.min.js"></script>
+<script>
+var windChart;
+function drawCharts(){
+    var windCtx = document.getElementById('windChart').getContext('2d');
+    var windArray = [];
+    var smoothWindArray = [];    
+    var dataLabels = [];
+    var dateIndex;
+    var drawn = false;
+    for(var x = data.length-1, y = 0; x>0; x--, y++){
+        windArray[y] = Number(parseFloat(data[x]['windspeedmph']));
+        dateIndex = data[x]['dateutc'];
+        dateIndex = Number(dateIndex);
+        dataLabels[y] = dayjs(dateIndex).format('dd hh:mm a');
+    }
+
+    smoothWindArray=smooth(windArray);
+
+    var windMin = Math.min.apply(null, smoothWindArray),
+        windMax = Math.max.apply(null, smoothWindArray);
+
+    windChart = new Chart(windCtx, {
+        type: 'line',
+        data: {
+            labels: dataLabels,
+            datasets: [{
+                label: 'Wind Speed (kts)',
+                data: smoothWindArray,
+                backgroundColor: [
+                    'rgba(100, 100, 255, 1)',
+                ],
+                borderColor: [
+                    'rgba(100, 100, 255, 1)',
+                ],
+                borderWidth: 1,
+                fontColor: 'black',
+                color: 'black'
+            }]
+        },
+        options: {
+            animation: {
+                duration: 0
+            },
+            scales: {
+                y: {
+                    min: windMin,
+                    max: windMax,
+                    beginAtZero: false,
+                    ticks:{
+                        fontColor: 'black',
+                        color: 'black'
+                    }
+                },
+                x: {
+                    ticks:{
+                        fontColor: 'black',
+                        color: 'black'
+                    }
+                }
+            },
+            elements: {
+                point:{
+                    radius: 0.5
+                }
+            },
+            plugins:{
+                legend:{
+                        labels:{
+                            font:{
+                                size:24,
+                            },
+                            color: 'black'
+                        }
+                }
+            }
+        }
+    });
+    drawn=true;
+}
+function drawNewCharts(){
+    windChart.destroy();
+    drawCharts();
+}
+
+function smooth(array){
+    var smoothFactor = document.getElementById("smoother").value;
+    console.log(smoothFactor);
+    smoothWindArray = [array[0]];
+    for(var i=1; array.length > i; i++){
+        smoothWindArray[i] = smoothFactor*array[i] + (1-smoothFactor)*smoothWindArray[i-1];  //	α * x\t + (1 - α) * s\t-1
+    }
+    return smoothWindArray;
+
+}
+</script>
+<html>
+    <body>
+        <canvas class="graph" id="windChart" width="1600px" height="600px"></canvas>
+        <input type="range" min="0.01" max="1" value="0.1" step="0.01" class="slider" id="smoother" onchange="drawNewCharts()">
+        <script>drawCharts();</script>
+    </body>
+</html>

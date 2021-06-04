@@ -1,0 +1,91 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<title>Smoothing</title>
+<script type = "text/javascript" src = "./data2.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.5/dayjs.min.js"></script>
+<script>
+
+
+
+function drawCharts(){
+    var windCtx = document.getElementById('windChart').getContext('2d');
+    var pressureArray = [];
+    var tempArray = [];
+    var dewArray = [];
+    var windArray = [];
+    var dataLabels = [];
+    var dateIndex;
+    for(var x = data.length-1, y = 0; x>0; x--, y++){
+        windArray[y] = Number(parseFloat(data[x]['windspeedmph']));
+        dateIndex = data[x]['dateutc'];
+        dateIndex = Number(dateIndex);
+        dataLabels[y] = dayjs(dateIndex).format('dd hh:mm a');
+    }
+
+    var windMin = Math.min.apply(null, windArray),
+        windMax = Math.max.apply(null, windArray);
+
+    var windChart = new Chart(windCtx, {
+        type: 'line',
+        data: {
+            labels: dataLabels,
+            datasets: [{
+                label: 'Wind Speed (kts)',
+                data: windArray,
+                backgroundColor: [
+                    'rgba(100, 100, 255, 1)',
+                ],
+                borderColor: [
+                    'rgba(100, 100, 255, 1)',
+                ],
+                borderWidth: 1,
+                fontColor: 'black',
+                color: 'black'
+            }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    min: windMin,
+                    max: windMax,
+                    beginAtZero: false,
+                    ticks:{
+                        fontColor: 'black',
+                        color: 'black'
+                    }
+                },
+                x: {
+                    ticks:{
+                        fontColor: 'black',
+                        color: 'black'
+                    }
+                }
+            },
+            elements: {
+                point:{
+                    radius: 0.5
+                }
+            },
+            plugins:{
+                legend:{
+                        labels:{
+                            font:{
+                                size:24,
+                            },
+                            color: 'black'
+                        }
+                }
+            }
+        }
+    });
+}
+</script>
+
+<html>
+    <body>
+        <canvas class="graph" id="windChart" width="1600px" height="600px"></canvas>
+        <script>drawCharts();</script>
+    </body>
+</html>

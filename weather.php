@@ -32,6 +32,8 @@
             $weatherArray3[]=$row;
         }
 
+        file_put_contents("./data/data.json",json_encode($weatherArray3));
+
         $pressure1 = $weatherArray1[0]['baromrelin'];
         $pressure2 = $weatherArray2[0]['baromrelin'];
         if($pressure1<40){$pressure1 = $pressure1 * 33.8639; }
@@ -51,6 +53,7 @@
         $dew = $weatherArray1[0]['dewPoint'];
         $press = $pressure1;
         $hum = $weatherArray1[0]['humidity'];
+        $date = $weatherArray1[0]['dateutc'];
 
         $stationState = $weatherArray1[0]['stationState'];
 ?>
@@ -75,6 +78,7 @@
     var dewPOYNT = <?php echo $dew ?>;
     var timeInterval = <?php echo $timeInterval ?>;
     var stationState = "<?php echo $stationState ?>";
+    var currentDate = <?php echo $date ?>;
 
     var Ctemp = (tempF - 32) * 5 / 9;
     var Cdew = (dewPOYNT - 32) * 5 / 9;
@@ -234,8 +238,14 @@
         <h2 align="center">South Lewis High School</h2>
     </div>
     <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid rounded ml-2 py-2" style="background-color: #444444;"><h4 align="left">Current Weather</h4>   
-        <input type="checkbox" id="showHideData" name="showHide" value="show" onclick="toggle('#dataSpot', this)"> Show Data   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <div class="container-fluid rounded ml-2 py-2" style="background-color: #444444;">
+            <div class="title">
+                <span class="words">Current Weather</span>
+                <span class="date" id="currentTime"></span><br>
+            </div>
+            <div class="data-panel-action">
+                <input type="checkbox" id="showHideData" name="showHide" value="show" onclick="toggle('#dataSpot', this)"> Show Data
+            </div>
             <div id="dataSpot" style="display: none; background-color: #444444;">
                 <div class="row pt-2">
                     <div class="col dataField" id="temp"></div>
