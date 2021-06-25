@@ -9,7 +9,7 @@
         mysqli_select_db($conn, $dbname) or die("yeah that doesn't work");
         $sql1 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 0,1";
         $sql2 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 36,1";
-        $sql3 = "SELECT dateutc, baromrelin, tempf, dewPoint, windspeedmph FROM weatherstation ORDER BY dateutc DESC LIMIT 0,864";
+        $sql3 = "SELECT dateutc, baromrelin, tempf, dewPoint, windspeedmph, winddir, stationState FROM weatherstation ORDER BY dateutc DESC LIMIT 0,864";
 
         $result1 = mysqli_query($conn, $sql1) or die("ERROR IN SELECTING FIRST". mysqli_error($conn));
         $result2 = mysqli_query($conn, $sql2) or die("ERROR IN SELECTING SECOND". mysqli_error($conn));
@@ -32,7 +32,7 @@
             $weatherArray3[]=$row;
         }
 
-        file_put_contents("./data/data.json",json_encode($weatherArray3));
+        //file_put_contents("./data/data.json",json_encode($weatherArray3));
 
         $pressure1 = $weatherArray1[0]['baromrelin'];
         $pressure2 = $weatherArray2[0]['baromrelin'];
@@ -66,10 +66,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="weather.css">
 <script type="text/javascript" src="createjs.min.js"></script>
-<script type="text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
+<script src="../node_modules/highcharts/highcharts.src.js"></script>
+<script type="text/javascript" src="../node_modules/highcharts/modules/windbarb.js"></script>
 <script type="text/javascript" src="stationfunctions.js"></script>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../node_modules/dayjs/dayjs.min.js"></script>
+<script type="text/javascript" src="../node_modules/moment/moment.js"></script>
+<script type="text/javascript" src="../node_modules/moment-timezone/moment-timezone.js"></script>
+<script type="text/javascript" src="../node_modules/moment-timezone//builds/moment-timezone-with-data-2012-2022.js"></script>
 
 <script>
     var tempF = <?php echo $temp ?>;
@@ -243,33 +247,34 @@
                 <span class="words">Current Weather</span>
                 <span class="date" id="currentTime"></span><br>
             </div>
+            <br>
             <div class="data-panel-action">
                 <input type="checkbox" id="showHideData" name="showHide" value="show" onclick="toggle('#dataSpot', this)"> Show Data
             </div>
             <div id="dataSpot" style="display: none; background-color: #444444;">
-                <div class="row pt-2">
-                    <div class="col dataField" id="temp"></div>
-                    <div class="col dataField" id="press"></div>
+                <div class="row pt-2 ">
+                    <div class="col dataField left" id="temp"></div>
+                    <div class="col dataField right" id="press"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="wetBulb"></div>
-                    <div class="col dataField" id="cloud"></div>
+                    <div class="col dataField left" id="wetBulb"></div>
+                    <div class="col dataField right" id="cloud"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="dpt"></div>
-                    <div class="col dataField" id="rh"></div>
+                    <div class="col dataField left" id="dpt"></div>
+                    <div class="col dataField right" id="rh"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="windData"></div>
-                    <div class="col dataField" id="summary"></div>
+                    <div class="col dataField left" id="windData"></div>
+                    <div class="col dataField right" id="summary"></div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col dataField" id="vis"></div>
-                    <div class="col dataField" id="AbsHum"></div>
+                    <div class="col dataField left" id="vis"></div>
+                    <div class="col dataField right" id="AbsHum"></div>
                 </div>
                 <div class="row py-2">
-                    <div class="col dataField" id="cloudBase">Cloud Base Altitude&nbsp; feet</div>
-                    <div class="col dataField"></div>
+                    <div class="col dataField left" id="cloudBase">Cloud Base Altitude&nbsp; feet</div>
+                    <div class="col dataField right"></div>
                 </div>
             </div>
         </div>
@@ -345,8 +350,14 @@
         drawStationModel();
        
     </script>
-    <canvas class="graph" id="pressureChart" width="1600px" height="600px"></canvas>
-    <canvas class="graph" id="tempsChart" width="1600px" height="600px"></canvas>
-    <canvas class="graph" id="windChart" width="1600px" height="600px"></canvas>
+    <figure class="highcharts-figure">
+        <div id="pressureChart"></div>
+    </figure>
+    <figure class="highcharts-figure">
+        <div id="tempsChart"></div>
+    </figure>
+    <figure class="highcharts-figure">
+        <div id="windChart"></div>
+    </figure>
     <script>drawCharts();</script>
 </html>

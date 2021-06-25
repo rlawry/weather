@@ -425,208 +425,617 @@ function drawCloudModal(){
     modalCtx.scale(1,1);
 }
 
+function isOdd(hours){
+    if(hours % 2 == 0){
+        return false;
+    }
+    else if(hours % 2 == 1){
+        return true;
+    }    
+}
+
+function generateOffset(startTime){
+    time = new Date(startTime);
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var offset = 0;
+    if(isOdd(hours)){offset = 1;}
+    else if(minutes != 0){offset = 2;}
+    return offset;
+}
+
+function generateStartTime(data){
+    var offset = generateOffset(data[0][0]);
+    var newTime = new Date(data[0][0]);
+    newTime.setMinutes(0);
+    var hours = newTime.getHours();
+    newTime.setHours(hours + offset);
+    return newTime;
+}
+
+function generateBarbs(data){
+    var index = 0;
+    var startTime = generateStartTime(data);
+    var graphLength = 78*60*60*1000;
+    var end = new Date(startTime.getTime() + graphLength);
+    var interval = 2*60*60*1000; //2 hours
+    var newData = [];
+    var testTime;
+    for(var i = new Date(startTime), x=0; i<end.getTime(); i.setTime(i.getTime()+interval), x++){
+        testTime = new Date(data[index][0]);
+        while(testTime<i && index<data.length-1){
+            index++;
+            testTime.setTime(data[index][0]);
+        }
+        if(index+1>=data.length){break;}
+        if(testTime.getTime()==i.getTime()){
+                newData[x]=data[index];
+        }
+        else if(data[index][0]<i.getTime() && data[index+1][0]<i.getTime()){
+        }
+        else{  
+            newData[x]=[testTime.getTime(),(data[index-1][1]+data[index+1][1])/2,(data[index-1][2]+data[index+1][2])/2];
+        }
+    }
+    return newData;
+}
+
+function bufferOfflineGraphArray(array){
+    var buffer = 0;
+    var bufferedArray = [];
+    var bufferTriggered = false;    
+    if(array[0][2]=="Offline"){
+            bufferTriggered = true;
+            for(var j = 1; j<array.length; j++){
+                if(array[j][2]=="Online"){
+                    buffer = -1*(array[j][1]-array[j-1][1]);
+                    break;
+                }
+            }
+    }
+    for(var i = 0; i<array.length; i++){
+        if(array[i][2] == "Online"){
+            buffer = 0;
+            bufferTriggered = false;
+        }
+        else if(array[i][2] == "Offline"){
+            if(bufferTriggered == false){
+                buffer = Number(parseFloat(array[i][1])-parseFloat(array[i-1][1]));
+                bufferTriggered = true;
+            }
+        }
+        bufferedArray[i] = [array[i][0],Number(parseFloat(array[i][1]))-buffer];
+    } 
+    return bufferedArray;
+    
+}
+
 function drawCharts(){
-    var pressureCtx = document.getElementById('pressureChart').getContext('2d');
-    var tempsCtx = document.getElementById('tempsChart').getContext('2d');
-    var windCtx = document.getElementById('windChart').getContext('2d');
+
     var pressureArray = [];
     var tempArray = [];
     var dewArray = [];
     var windArray = [];
-    var dataLabels = [];
-    var dateIndex;
     for(var x = dataArray.length-1, y = 0; x>0; x--, y++){
-        pressureArray[y] = Number(parseFloat(dataArray[x]['baromrelin']));
-        tempArray[y] = Number(parseFloat(dataArray[x]['tempf']));
-        dewArray[y] = Number(parseFloat(dataArray[x]['dewPoint']));
-        windArray[y] = Number(parseFloat(dataArray[x]['windspeedmph']));
-        dateIndex = dataArray[x]['dateutc'];
-        dateIndex = Number(dateIndex);
-        dataLabels[y] = dayjs(dateIndex).format('dd hh:mm a');
+        pressureArray[y] = [Number(parseFloat(dataArray[x]['dateutc'])),Number(parseFloat(dataArray[x]['baromrelin'])),dataArray[x]['stationState']];
+        tempArray[y] = [Number(parseFloat(dataArray[x]['dateutc'])),Number(parseFloat(dataArray[x]['tempf'])),dataArray[x]['stationState']];
+        dewArray[y] = [Number(parseFloat(dataArray[x]['dateutc'])),Number(parseFloat(dataArray[x]['dewPoint'])),dataArray[x]['stationState']];
+        windArray[y] = [Number(parseFloat(dataArray[x]['dateutc'])),Number(parseFloat(dataArray[x]['windspeedmph']))*0.868976,Number(parseFloat(dataArray[x]['winddir']))];
     }
-    var pressureMin = Math.min.apply(null, pressureArray),
-        pressureMax = Math.max.apply(null, pressureArray);
-    var tempMin = Math.min.apply(null, dewArray),
-        tempMax = Math.max.apply(null, tempArray);
+    var reducedWindArray = [];
 
+    reducedWindArray = generateBarbs(windArray);
     var smoothWindArray = smooth(windArray);
+    var bufferedPressureArray = new Array();
+    var bufferedTempArray = new Array();
+    var bufferedDewArray = new Array();
+    bufferedPressureArray = bufferOfflineGraphArray(pressureArray);
+    bufferedTempArray = bufferOfflineGraphArray(tempArray);
+    bufferedDewArray = bufferOfflineGraphArray(dewArray);
+    Highcharts.setOptions({
+        global: {
+            timezone: 'America/New_York'
+        },
+        colors: ['#FF00d5', '#ff003f'],
+        lang: {
+            thousandsSep:",",
+        }
+    });
+    Highcharts.chart('pressureChart', {
+        chart: {
+            zoomType: 'x',
+            backgroundColor: '#444444',
+            marginRight: 50
+        },
+        series: [{
+            name: 'Pressure',
+            data: bufferedPressureArray,
+            showInLegend: false,
+            type: 'area',
+            tooltip: {
+                valueSuffix: 'mb'
+            }
+        }],
+        title: {
+            text: 'Relative Barometric Pressure',
+            style: {
+                color: 'white',
+            }
+        },
+        subtitle: {
+            text: 'South Lewis, approximately 3 days',
+            style: {
+                color: 'white',
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Barometric Pressure (mb)',
+                style: {
+                    color: 'white',
+                }
+            },
+            labels: {
+                style: {
+                    color: 'white',
+                }
+            }
+        },
+        xAxis: [{
+            type: "datetime",
+            tickInterval: 144e5,
+            minorTickInterval: 72e5,
+            tickLength: 0,
+            gridLineWidth: 1,
+            gridLineColor: "rgb(68, 68, 68)",
+            minorGridLineColor: "rgb(68, 68, 68)",
+            startOnTick: !1,
+            endOnTick: !1,
+            minPadding: 0,
+            maxPadding: 0,
+            showLastLabel: !0,
+            labels: {
+                format: "{value:%l}",
+                y: 12,
+                style: {
+                    color: 'white',
+                }
+            }
+        }, {
+            linkedTo: 0,
+            type: "datetime",
+            tickInterval: 432e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%P</span>}',
+                align: "left",
+                x: 3,
+                y: 13,
+            },
+            tickLength: 18,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(68, 68, 68)',
+            offset: 15
+        }, {
+            linkedTo: 1,
+            type: "datetime",
+            tickInterval: 864e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%a</span> %b %e}',
+                align: "left",
+                x: 3,
+                y: 26,
+                style: {
+                    color: 'white',
+                }
+            },
+            tickLength: 36,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(88, 88, 188)',
+            offset: 15
+        }],
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                color: '#FF00d5',
+                animation: false
+            },
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, '#Fd00d2'],
+                        [1, 'rgba(0,0,0,0)']
+                    ]
+                },
+                marker: {
+                    radius: 2
+                },
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                threshold: null
+            },
 
-    var windMin = Math.min.apply(null, smoothWindArray),
-        windMax = Math.max.apply(null, smoothWindArray);
-    var pressureChart = new Chart(pressureCtx, {
-        type: 'line',
-        data: {
-            labels: dataLabels,
-            datasets: [{
-                label: 'Relative Barometric Pressure (mb)',
-                data: pressureArray,
-                backgroundColor: [
-                    'rgba(255, 255, 200, 1)',
-                ],
-                borderColor: [
-                    'rgba(255, 255, 200, 1)',
-                ],
-                borderWidth: 1,
-                fontColor: 'white',
-                color: 'white'
-            }
-            ]
         },
-        options: {
-            scales: {
-                y: {
-                    min: pressureMin,
-                    max: pressureMax,
-                    beginAtZero: false,
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
-                    }
+        tooltip:{
+            valueDecimals: 1,
+            crosshairs: [true]
+        },
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
                 },
-                x: {
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
                     }
                 }
-            },
-            elements: {
-                point:{
-                    radius: 0.5
-                }
-            },
-            plugins:{
-                legend:{
-                        labels:{
-                            font:{
-                                size:24,
-                            },
-                            color: 'white'
-                        }
-                }
-            }
+            }]
         }
     });
-    var tempsChart = new Chart(tempsCtx, {
-        type: 'line',
-        data: {
-            labels: dataLabels,
-            datasets: [{
-                label: 'Temperature (°F)',
-                data: tempArray,
-                backgroundColor: [
-                    'rgba(255, 100, 100, 1)',
-                ],
-                borderColor: [
-                    'rgba(255, 100, 100, 1)',
-                ],
-                borderWidth: 1,
-                fontColor: 'white',
-                color: 'white'
-            },
-            {
-                label: 'Dewpoint (°F)',
-                data: dewArray,
-                backgroundColor: [
-                    'rgba(100, 255, 100, 1)',
-                ],
-                borderColor: [
-                    'rgba(100, 255, 100, 1)',
-                ],
-                borderWidth: 1,
-                fontColor: 'white',
-                color: 'white'
-            }
-            ]
+    Highcharts.chart('tempsChart', {
+        chart: {
+            zoomType: 'x',
+            backgroundColor: '#444444',
+            marginRight: 50
         },
-        options: {
-            scales: {
-                y: {
-                    min: tempMin,
-                    max: tempMax,
-                    beginAtZero: false,
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
+        series: [{
+            name: 'Temperature',
+            data: bufferedTempArray,
+            zoomType: 'x',
+            showInLegend: false,
+            color: "#ff003f",
+            type: 'area',
+            tooltip: {
+                valueSuffix: '°F'
+            }
+        },{
+            name: 'Dewpoint',
+            data: bufferedDewArray,
+            showInLegend: false,
+            color: '#00FFFF',
+            tooltip: {
+                valueSuffix: '°F'
+            }
+        }],
+        title: {
+            text: 'Temperature and Dewpoint',
+            style: {
+                color: 'white',
+            }
+        },
+        subtitle: {
+            text: 'South Lewis, approximately 3 days',
+            style: {
+                color: 'white',
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°F)',
+                style: {
+                    color: 'white',
+                }
+            },
+            labels: {
+                style: {
+                    color: 'white',
+                }
+            }
+        },
+        xAxis: [{
+            type: "datetime",
+            tickInterval: 144e5,
+            minorTickInterval: 72e5,
+            tickLength: 0,
+            gridLineWidth: 1,
+            gridLineColor: "rgb(68, 68, 68)",
+            minorGridLineColor: "rgb(68, 68, 68)",
+            startOnTick: !1,
+            endOnTick: !1,
+            minPadding: 0,
+            maxPadding: 0,
+            showLastLabel: !0,
+            labels: {
+                format: "{value:%l}",
+                y: 12,
+                style: {
+                    color: 'white',
+                }
+            }
+        }, {
+            linkedTo: 0,
+            type: "datetime",
+            tickInterval: 432e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%P</span>}',
+                align: "left",
+                x: 3,
+                y: 13,
+            },
+            tickLength: 18,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(68, 68, 68)',
+            offset: 15
+        }, {
+            linkedTo: 1,
+            type: "datetime",
+            tickInterval: 864e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%a</span> %b %e}',
+                align: "left",
+                x: 3,
+                y: 26,
+                style: {
+                    color: 'white',
+                }
+            },
+            tickLength: 36,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(88, 88, 188)',
+            offset: 15
+        }],
+        tooltip:{
+            valueDecimals: 1,
+            crosshairs: [true],
+            shared: [true],
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                animation: false
+            },
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, '#ff003f'],
+                        [1, 'rgba(0,0,0,0)']
+                    ]
+                },
+                marker: {
+                    radius: 2
+                },
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
                     }
                 },
-                x: {
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
+                threshold: null
+            },                
+
+        },
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
                     }
                 }
-            },
-            elements: {
-                point:{
-                    radius: 0.5
-                }
-            },
-            plugins:{
-                legend:{
-                        labels:{
-                            font:{
-                                size:24,
-                            },
-                            color: 'white'
-                        }
-                }
-            }
+            }]
         }
+
     });
-    var windChart = new Chart(windCtx, {
-        type: 'line',
-        data: {
-            labels: dataLabels,
-            datasets: [{
-                label: 'Wind Speed (kts)',
-                data: smoothWindArray,
-                backgroundColor: [
-                    'rgba(100, 100, 255, 1)',
-                ],
-                borderColor: [
-                    'rgba(100, 100, 255, 1)',
-                ],
-                borderWidth: 1,
-                fontColor: 'white',
-                color: 'white'
-            }
-            ]
+    Highcharts.chart('windChart', {
+        chart: {
+            zoomType: 'x',
+            backgroundColor: '#444444',
+            marginRight: 50,
+            marginBottom: 100
         },
-        options: {
-            scales: {
-                y: {
-                    min: windMin,
-                    max: windMax,
-                    beginAtZero: false,
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
+        title: {
+            text: 'Wind Speed (kts)',
+            style: {
+                color: 'white',
+            }
+        },
+        subtitle: {
+            text: 'South Lewis, approximately 3 days',
+            style: {
+                color: 'white',
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind Speed (kts)',
+                style: {
+                    color: 'white',
+                }
+            },
+            labels: {
+                style: {
+                    color: 'white',
+                }
+            }
+        },
+        xAxis: [{
+            type: "datetime",
+            tickInterval: 144e5,
+            minorTickInterval: 72e5,
+            tickLength: 0,
+            gridLineWidth: 1,
+            gridLineColor: "rgb(68, 68, 68)",
+            minorGridLineColor: "rgb(68, 68, 68)",
+            startOnTick: !1,
+            endOnTick: !1,
+            minPadding: 0,
+            maxPadding: 0,
+            showLastLabel: !0,
+            labels: {
+                format: "{value:%l}",
+                y: 12,
+                style: {
+                    color: 'white',
+                }
+            }
+        }, {
+            linkedTo: 0,
+            type: "datetime",
+            tickInterval: 432e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%P</span>}',
+                align: "left",
+                x: 3,
+                y: 13,
+            },
+            tickLength: 18,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(68, 68, 68)',
+            offset: 15
+        }, {
+            linkedTo: 1,
+            type: "datetime",
+            tickInterval: 864e5,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold; color: white;">%a</span> %b %e}',
+                align: "left",
+                x: 3,
+                y: 26,
+                style: {
+                    color: 'white',
+                }
+            },
+            tickLength: 36,
+            lineWidth: 1,
+            gridLineWidth: 1,
+            gridLineColor: 'rgb(88, 88, 188)',
+            offset: 15
+        }],
+
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                states:{
+                    inactive:{
+                        opacity: 1
                     }
                 },
-                x: {
-                    ticks:{
-                        fontColor: 'white',
-                        color: 'white'
+                animation: false
+            },
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, '#FF4D00'],
+                        [1, 'rgba(0,0,0,0)']
+                    ]
+                },
+                marker: {
+                    radius: 2
+                },
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
                     }
-                }
+                },
+                threshold: null
             },
-            elements: {
-                point:{
-                    radius: 0.5
-                }
-            },
-            plugins:{
-                legend:{
-                        labels:{
-                            font:{
-                                size:24,
-                            },
-                            color: 'white'
-                        }
+            windbarb: {
+                yOffset: -210,
+                tooltip:{
+                    shared: true
                 }
             }
+        },
+        tooltip:{
+            crosshairs: [true]
+        },
+
+        series: [{
+            name: 'Wind',
+            data: smoothWindArray,
+            showInLegend: false,
+            color: '#FF4D00',
+            type: 'area',
+            tooltip: {
+                valueSuffix: 'kts',
+                valueDecimals: 1,
+                shared: true
+            }
+        },
+        {
+            name: 'Barb',
+            data: reducedWindArray,
+            type: 'windbarb',
+            showInLegend: false,
+            color: 'white',
+            tooltip: {
+                valueSuffix: 'kts',
+                valueDecimals: 1,
+                shared: true
+            }
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
         }
+
     });
 }
 
@@ -634,10 +1043,10 @@ function smooth(array){
     var smoothFactor = 0.42;
     var smoothResult = [array[0]];
     for(var i=1; array.length > i; i++){
-        smoothResult[i] = smoothFactor*array[i] + (1-smoothFactor)*smoothResult[i-1];  //	α * x\t + (1 - α) * s\t-1
+        smoothResult[i] = array[i];
+        smoothResult[i][1] = smoothFactor*array[i][1] + (1-smoothFactor)*smoothResult[i-1][1];  //	α * x\t + (1 - α) * s\t-1
     }
     return smoothResult;
-
 }
 
 function draw_weather(obj, state) {
