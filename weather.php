@@ -9,7 +9,7 @@
         mysqli_select_db($conn, $dbname) or die("yeah that doesn't work");
         $sql1 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 0,1";
         $sql2 = "SELECT * FROM weatherstation ORDER BY dateutc DESC LIMIT 36,1";
-        $sql3 = "SELECT dateutc, baromrelin, tempf, dewPoint, windspeedmph, winddir, stationState FROM weatherstation ORDER BY dateutc DESC LIMIT 0,864";
+        $sql3 = "SELECT dateutc, baromrelin, tempf, dewPoint, windspeedmph, winddir, stationState FROM weatherstation ORDER BY dateutc DESC LIMIT 0,824";
 
         $result1 = mysqli_query($conn, $sql1) or die("ERROR IN SELECTING FIRST". mysqli_error($conn));
         $result2 = mysqli_query($conn, $sql2) or die("ERROR IN SELECTING SECOND". mysqli_error($conn));

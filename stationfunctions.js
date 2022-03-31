@@ -482,8 +482,11 @@ function generateBarbs(data){
 
 function bufferOfflineGraphArray(array){
     var buffer = 0;
-    var bufferedArray = [];
-    var bufferTriggered = false;    
+    var bufferedArray = new Array();
+    var bufferTriggered = false;
+    var triggerCount = 0;
+    var triggerTimes = new Array();
+
     if(array[0][2]=="Offline"){
             bufferTriggered = true;
             for(var j = 1; j<array.length; j++){
@@ -491,11 +494,13 @@ function bufferOfflineGraphArray(array){
                     buffer = -1*(array[j][1]-array[j-1][1]);
                     break;
                 }
+                
             }
     }
     for(var i = 0; i<array.length; i++){
         if(array[i][2] == "Online"){
             buffer = 0;
+            if(bufferTriggered == true){triggerCount++;}
             bufferTriggered = false;
         }
         else if(array[i][2] == "Offline"){
@@ -506,6 +511,7 @@ function bufferOfflineGraphArray(array){
         }
         bufferedArray[i] = [array[i][0],Number(parseFloat(array[i][1]))-buffer];
     } 
+    console.log(triggerCount + " times triggered");
     return bufferedArray;
     
 }
